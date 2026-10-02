@@ -1,0 +1,162 @@
+/* ========================================
+   Paws & Cuddles
+   Basic Styles
+======================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333333;
+    background: #fffaf3;
+}
+
+.container {
+    width: min(1100px, 92%);
+    margin: 0 auto;
+}
+
+
+/* Header */
+
+.site-header {
+    background: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+    padding: 20px 0;
+}
+
+.site-header .container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.brand {
+    color: #4f6f52;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.main-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.main-nav a {
+    color: #333333;
+    text-decoration: none;
+}
+
+.main-nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* Hero */
+
+.hero {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.eyebrow {
+    color: #6b7f5f;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.hero h1 {
+    max-width: 750px;
+    margin: 0 auto 20px;
+    font-size: 2.4rem;
+    line-height: 1.15;
+}
+
+.hero p {
+    max-width: 650px;
+    margin: 0 auto 30px;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+
+/* Buttons */
+
+.button {
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 8px;
+    background: #6b7f5f;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.button:hover {
+    opacity: 0.9;
+}
+
+.button-secondary {
+    background: #e8dfd0;
+    color: #333333;
+}
+
+
+/* Placeholder sections */
+
+.placeholder-section {
+    padding: 60px 0;
+    border-top: 1px solid #eee5d9;
+}
+
+.placeholder-section h2 {
+    margin-top: 0;
+}
+
+
+/* Footer */
+
+.site-footer {
+    padding: 30px 0;
+    background: #f1eadf;
+    text-align: center;
+}
+
+
+/* Responsive */
+
+@media (min-width: 768px) {
+
+    .site-header .container {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .main-nav {
+        justify-content: flex-end;
+    }
+
+    .hero {
+        padding: 120px 0;
+    }
+
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+}
