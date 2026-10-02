@@ -1,7 +1,8 @@
-/*
- * Paws & Cuddles
- * Main JavaScript
- *
- * Interactive functionality will be added
- * in later development steps.
- */
+// ========================================
+// Paws & Cuddles
+// Main JavaScript
+// ========================================
+
+document.addEventListener("DOMContentLoaded", function () {
+    console.log("Paws & Cuddles website loaded successfully.");
+});
