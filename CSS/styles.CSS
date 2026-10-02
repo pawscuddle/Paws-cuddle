@@ -1,6 +1,31 @@
 /* ========================================
    Paws & Cuddles
-   Basic Styles
+   Visual Design System
+======================================== */
+
+:root {
+    --cream: #fffaf3;
+    --warm-white: #ffffff;
+    --beige: #eee4d4;
+    --sage: #6f8063;
+    --sage-dark: #526148;
+    --brown: #8a6a4a;
+    --charcoal: #30332f;
+    --muted-text: #686b64;
+    --border: #e6ddd0;
+
+    --radius-small: 8px;
+    --radius-medium: 16px;
+    --radius-large: 24px;
+
+    --shadow-soft: 0 8px 25px rgba(60, 50, 40, 0.08);
+
+    --container-width: 1120px;
+}
+
+
+/* ========================================
+   Reset
 ======================================== */
 
 * {
@@ -13,34 +38,76 @@ html {
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: #333333;
-    background: #fffaf3;
+    background: var(--cream);
+    color: var(--charcoal);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+
+/* ========================================
+   Global Elements
+======================================== */
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    color: var(--sage-dark);
 }
 
 .container {
-    width: min(1100px, 92%);
+    width: min(92%, var(--container-width));
     margin: 0 auto;
 }
 
+section {
+    padding: 70px 0;
+}
 
-/* Header */
+h1,
+h2,
+h3,
+h4 {
+    margin-top: 0;
+    line-height: 1.2;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+p {
+    color: var(--muted-text);
+}
+
+
+/* ========================================
+   Header
+======================================== */
 
 .site-header {
-    background: #ffffff;
-    border-bottom: 1px solid #eeeeee;
+    background: var(--warm-white);
+    border-bottom: 1px solid var(--border);
     padding: 20px 0;
 }
 
 .site-header .container {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 16px;
 }
 
 .brand {
-    color: #4f6f52;
+    color: var(--sage-dark);
     font-size: 1.5rem;
     font-weight: 700;
     text-decoration: none;
@@ -49,42 +116,51 @@ body {
 .main-nav {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 14px;
 }
 
 .main-nav a {
-    color: #333333;
+    color: var(--charcoal);
     text-decoration: none;
+    font-weight: 600;
 }
 
 .main-nav a:hover {
-    text-decoration: underline;
+    color: var(--sage-dark);
 }
 
 
-/* Hero */
+/* ========================================
+   Hero
+======================================== */
 
 .hero {
-    padding: 80px 0;
+    padding: 90px 0;
     text-align: center;
+    background: var(--cream);
+}
+
+.hero .container {
+    max-width: 850px;
 }
 
 .eyebrow {
-    color: #6b7f5f;
+    margin-bottom: 12px;
+    color: var(--sage-dark);
     font-weight: 700;
-    margin-bottom: 10px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
 }
 
 .hero h1 {
-    max-width: 750px;
-    margin: 0 auto 20px;
-    font-size: 2.4rem;
-    line-height: 1.15;
+    margin-bottom: 20px;
+    font-size: 2.7rem;
 }
 
 .hero p {
-    max-width: 650px;
+    max-width: 680px;
     margin: 0 auto 30px;
+    font-size: 1.1rem;
 }
 
 .hero-actions {
@@ -95,50 +171,81 @@ body {
 }
 
 
-/* Buttons */
+/* ========================================
+   Buttons
+======================================== */
 
 .button {
     display: inline-block;
-    padding: 12px 20px;
-    border-radius: 8px;
-    background: #6b7f5f;
+    padding: 13px 22px;
+    border: 2px solid var(--sage);
+    border-radius: var(--radius-small);
+    background: var(--sage);
     color: #ffffff;
-    text-decoration: none;
     font-weight: 700;
+    text-decoration: none;
+    transition: 0.2s ease;
 }
 
 .button:hover {
-    opacity: 0.9;
+    background: var(--sage-dark);
+    border-color: var(--sage-dark);
 }
 
 .button-secondary {
-    background: #e8dfd0;
-    color: #333333;
+    background: transparent;
+    color: var(--sage-dark);
+}
+
+.button-secondary:hover {
+    color: #ffffff;
 }
 
 
-/* Placeholder sections */
+/* ========================================
+   Placeholder Sections
+======================================== */
 
 .placeholder-section {
-    padding: 60px 0;
-    border-top: 1px solid #eee5d9;
+    border-top: 1px solid var(--border);
 }
 
-.placeholder-section h2 {
-    margin-top: 0;
+.placeholder-section .container {
+    max-width: 850px;
 }
 
 
-/* Footer */
+/* ========================================
+   Cards
+======================================== */
+
+.card {
+    padding: 24px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-medium);
+    background: var(--warm-white);
+    box-shadow: var(--shadow-soft);
+}
+
+
+/* ========================================
+   Footer
+======================================== */
 
 .site-footer {
-    padding: 30px 0;
-    background: #f1eadf;
+    padding: 35px 0;
+    background: var(--beige);
     text-align: center;
 }
 
+.site-footer p {
+    margin: 0;
+}
 
-/* Responsive */
+
+/* ========================================
+   Responsive Design
+======================================== */
 
 @media (min-width: 768px) {
 
@@ -157,6 +264,10 @@ body {
     }
 
     .hero h1 {
-        font-size: 3.5rem;
+        font-size: 3.8rem;
+    }
+
+    h2 {
+        font-size: 2.4rem;
     }
 }
