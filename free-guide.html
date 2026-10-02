@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Request the free Paws & Cuddles pet-care guide and get a handy starting point for everyday pet care.">
+  <meta name="theme-color" content="#65765f">
+  <title>Free Guide | Paws &amp; Cuddles</title>
+  <link rel="stylesheet" href="CSS/styles.css">
+  <script src="js/main.js" defer></script>
+</head>
+
+<body>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="index.html" aria-label="Paws & Cuddles home">
+        <img src="images/branding/logo-mark.svg" alt="" class="brand-mark">
+        <span>Paws &amp; Cuddles</span>
+      </a>
+
+      <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">
+        Menu
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="pet-care.html">Pet Care</a>
+        <a href="free-guide.html">Free Guide</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="page-hero">
+      <div class="container narrow">
+        <p class="eyebrow">Free guide</p>
+        <h1>A handy starting point for everyday pet care.</h1>
+        <p class="lead">
+          Request the Paws &amp; Cuddles guide for simple ideas around routines,
+          feeding, grooming, exercise and enrichment.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container two-column">
+
+        <div class="form-card">
+          <p class="eyebrow">Request your copy</p>
+          <h2>Get the free guide</h2>
+          <p>
+            Enter your details below. The form is ready for a future form
+            provider, but it is not connected yet.
+          </p>
+
+          <form
+            action="YOUR_FORM_ENDPOINT"
+            method="post"
+            data-placeholder-form="guide"
+          >
+
+            <label for="guide-name">Full Name</label>
+            <input
+              type="text"
+              id="guide-name"
+              name="name"
+              autocomplete="name"
+              required
+            >
+
+            <label for="guide-email">Email</label>
+            <input
+              type="email"
+              id="guide-email"
+              name="email"
+              autocomplete="email"
+              required
+            >
+
+            <label class="checkbox-row" for="guide-marketing">
+              <input
+                type="checkbox"
+                id="guide-marketing"
+                name="marketing_consent"
+                value="yes"
+              >
+              <span>
+                I'd like to receive occasional pet-care updates and useful
+                resources by email.
+              </span>
+            </label>
+
+            <p class="form-note">
+              Marketing emails are optional and are not required to request
+              the guide.
+            </p>
+
+            <button class="button" type="submit">
+              Request Guide
+            </button>
+
+            <p class="form-status" aria-live="polite"></p>
+
+          </form>
+        </div>
+
+        <div class="guide-cover">
+          <img
+            src="images/guide/guide-cover.svg"
+            alt="Paws & Cuddles free pet-care guide"
+          >
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section section-soft">
+      <div class="container">
+
+        <div class="section-heading">
+          <p class="eyebrow">Inside the guide</p>
+          <h2>Simple ideas for building better routines.</h2>
+          <p>
+            The guide is designed as a practical starting point for pet
+            families and can be adapted to different animals and households.
+          </p>
+        </div>
+
+        <div class="card-grid">
+
+          <article class="card">
+            <h3>Everyday routines</h3>
+            <p>
+              Think through feeding, rest, activity, grooming and observation
+              as parts of a consistent daily routine.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Feeding basics</h3>
+            <p>
+              Consider species, life stage, appropriate food and a routine
+              that fits your pet's individual needs.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Enrichment ideas</h3>
+            <p>
+              Add safe opportunities for movement, exploration, play and
+              natural behaviors.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Responsible care</h3>
+            <p>
+              Learn your pet's normal patterns and seek qualified professional
+              advice when something seems unusual or concerning.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container callout">
+        <p class="eyebrow">Before publishing</p>
+        <h2>Connect the form when you're ready.</h2>
+        <p>
+          This page intentionally uses a placeholder form endpoint. Before
+          publishing the form as a working service, replace
+          <strong>YOUR_FORM_ENDPOINT</strong> with the endpoint from your
+          chosen form provider and make sure your privacy information matches
+          the service you use.
+        </p>
+        <a class="button button-secondary" href="contact.html">
+          Contact Paws &amp; Cuddles
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+
+      <div>
+        <a class="brand footer-brand" href="index.html">
+          <img src="images/branding/logo-mark.svg" alt="" class="brand-mark">
+          <span>Paws &amp; Cuddles</span>
+        </a>
+        <p>
+          Warm, practical pet-care education for everyday life with animals.
+        </p>
+      </div>
+
+      <div>
+        <h3>Explore</h3>
+        <a href="pet-care.html">Pet Care</a>
+        <a href="free-guide.html">Free Guide</a>
+        <a href="products.html">Products</a>
+      </div>
+
+      <div>
+        <h3>Info</h3>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="disclosure.html">Disclosure</a>
+      </div>
+
+    </div>
+
+    <div class="container footer-bottom">
+      <span>&copy; <span data-year></span> Paws &amp; Cuddles</span>
+      <span>Made with care for pet families.</span>
+    </div>
+  </footer>
+
+</body>
+          </html>
