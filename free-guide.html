@@ -1,264 +1,368 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Free Guide | Paws & Cuddles</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta
-    name="description"
-    content="Get the Paws & Cuddles everyday pet care guide."
->
+    <title>Free Pet Guide | Paws & Cuddles</title>
 
-<link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="./CSS/styles.css">
 
-<style>
-    .page-hero {
-        padding: 80px 20px 60px;
-        background: linear-gradient(135deg, #f7f0e4, #e7efe5);
-        text-align: center;
-    }
-
-    .page-hero h1 {
-        max-width: 800px;
-        margin: 0 auto 18px;
-        font-size: clamp(2.2rem, 5vw, 4rem);
-        line-height: 1.1;
-    }
-
-    .page-hero p {
-        max-width: 720px;
-        margin: auto;
-        color: #5f655f;
-        font-size: 1.08rem;
-    }
-
-    .guide-layout {
-        display: grid;
-        grid-template-columns: 1.1fr 0.9fr;
-        gap: 45px;
-        align-items: center;
-    }
-
-    .guide-card {
-        background: #fff;
-        border: 1px solid #e2e3dc;
-        border-radius: 24px;
-        padding: 32px;
-        box-shadow: 0 10px 30px rgba(63, 68, 60, 0.07);
-    }
-
-    .guide-card h2 {
-        margin-bottom: 12px;
-    }
-
-    .guide-card p {
-        color: #666b65;
-        line-height: 1.7;
-    }
-
-    .guide-form {
-        margin-top: 25px;
-    }
-
-    .form-group {
-        margin-bottom: 18px;
-    }
-
-    .form-group label {
-        display: block;
-        margin-bottom: 7px;
-        font-weight: 600;
-    }
-
-    .form-group input {
-        width: 100%;
-        padding: 13px 14px;
-        border: 1px solid #d9ddd5;
-        border-radius: 12px;
-        font: inherit;
-        box-sizing: border-box;
-        background: #fff;
-    }
-
-    .form-group input:focus {
-        outline: 2px solid #aebfaa;
-        border-color: #879d86;
-    }
-
-    .checkbox-row {
-        display: flex;
-        gap: 10px;
-        align-items: flex-start;
-        margin: 18px 0;
-    }
-
-    .checkbox-row input {
-        margin-top: 5px;
-    }
-
-    .checkbox-row label {
-        color: #666b65;
-        font-size: 0.92rem;
-        line-height: 1.5;
-    }
-
-    .form-note {
-        font-size: 0.88rem;
-        color: #777c76;
-        margin-top: 15px;
-    }
-
-    .guide-cover {
-        min-height: 390px;
-        border-radius: 28px;
-        background: linear-gradient(145deg, #e6eee5, #f7efe3);
-        border: 1px solid #dce3d9;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        padding: 35px;
-        box-sizing: border-box;
-    }
-
-    .guide-cover-inner {
-        background: rgba(255, 255, 255, 0.78);
-        border-radius: 22px;
-        padding: 35px 25px;
-        max-width: 300px;
-        box-shadow: 0 12px 30px rgba(63, 68, 60, 0.08);
-    }
-
-    .guide-icon {
-        font-size: 4rem;
-        margin-bottom: 15px;
-    }
-
-    .guide-cover h2 {
-        margin-bottom: 8px;
-    }
-
-    .guide-cover p {
-        color: #666b65;
-        line-height: 1.6;
-    }
-
-    .guide-note {
-        margin-top: 35px;
-        padding: 24px;
-        border-radius: 18px;
-        background: #f7f5ef;
-        border: 1px solid #e2e3dc;
-    }
-
-    .guide-note p {
-        margin: 0;
-        color: #555b55;
-        line-height: 1.7;
-    }
-
-    @media (max-width: 800px) {
-        .guide-layout {
-            grid-template-columns: 1fr;
+    <style>
+        .guide-hero {
+            background:
+                linear-gradient(rgba(63, 68, 60, 0.48), rgba(63, 68, 60, 0.48)),
+                url("./images/hero/179104249002.jpg") center/cover no-repeat;
         }
 
-        .guide-cover {
-            min-height: 300px;
-            order: -1;
-        }
-    }
-
-    @media (max-width: 600px) {
-        .page-hero {
-            padding: 60px 20px 45px;
+        .guide-offer {
+            display: grid;
+            grid-template-columns: 1.05fr 0.95fr;
+            gap: 40px;
+            align-items: stretch;
         }
 
-        .guide-card {
+        .guide-benefits {
+            background: #f3f0e7;
+            border-radius: 28px;
+            padding: 38px;
+        }
+
+        .guide-benefits h2 {
+            margin-top: 0;
+        }
+
+        .guide-benefit {
+            display: flex;
+            gap: 16px;
+            margin-top: 24px;
+        }
+
+        .guide-benefit-icon {
+            flex: 0 0 48px;
+            width: 48px;
+            height: 48px;
+            display: grid;
+            place-items: center;
+            background: #dfe8dc;
+            border-radius: 14px;
+            font-size: 24px;
+        }
+
+        .guide-benefit h3 {
+            margin: 0 0 5px;
+        }
+
+        .guide-benefit p {
+            margin: 0;
+            color: #6d7068;
+        }
+
+        .gift-box {
+            margin-top: 30px;
             padding: 24px;
+            border-radius: 20px;
+            background: #ffffff;
+            border: 1px solid #ddd9cd;
         }
-    }
-</style>
 
-</head><body><header class="site-header">
-    <div class="container nav-wrap">    <a class="brand" href="index.html" aria-label="Paws & Cuddles home">
-        <span class="brand-mark">🐾</span>
-        <span>Paws & Cuddles</span>
-    </a>
+        .gift-box strong {
+            display: block;
+            font-size: 18px;
+            margin-bottom: 7px;
+        }
 
-    <nav class="site-nav" aria-label="Primary navigation">
-        <a href="index.html">Home</a>
-        <a href="pet-care.html">Pet Care</a>
-        <a href="free-guide.html">Free Guide</a>
-        <a href="products.html">Products</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+        .guide-form-card {
+            background: #ffffff;
+            border: 1px solid #e2e0d8;
+            border-radius: 28px;
+            padding: 38px;
+            box-shadow: 0 14px 40px rgba(63, 68, 60, 0.09);
+        }
 
-</div>
+        .guide-form-card h2 {
+            margin-top: 0;
+        }
 
-</header><main><section class="page-hero">
-    <div class="container">
+        .form-note {
+            color: #6d7068;
+            font-size: 14px;
+            line-height: 1.6;
+        }
 
-        <p class="eyebrow">Free guide</p>
+        .guide-form {
+            margin-top: 25px;
+        }
 
-        <h1>
-            A handy starting point for everyday pet care.
-        </h1>
+        .guide-form label {
+            display: block;
+            margin-bottom: 7px;
+            font-weight: 600;
+        }
 
-        <p>
-            A simple resource for organizing everyday routines and
-            thinking through your companion's needs.
-        </p>
+        .guide-form input[type="text"],
+        .guide-form input[type="email"] {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 14px 15px;
+            border: 1px solid #d8d5ca;
+            border-radius: 12px;
+            font: inherit;
+            margin-bottom: 18px;
+            background: #fff;
+        }
+
+        .guide-form input:focus {
+            outline: none;
+            border-color: #8a9a82;
+            box-shadow: 0 0 0 3px rgba(138, 154, 130, 0.15);
+        }
+
+        .marketing-option {
+            display: flex;
+            gap: 10px;
+            align-items: flex-start;
+            margin: 4px 0 22px;
+            color: #6d7068;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .marketing-option input {
+            margin-top: 4px;
+        }
+
+        .guide-submit {
+            width: 100%;
+            border: 0;
+            cursor: pointer;
+        }
+
+        .privacy-note {
+            margin-top: 16px;
+            font-size: 13px;
+            color: #777a72;
+            line-height: 1.5;
+        }
+
+        .gift-section {
+            text-align: center;
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        .gift-card {
+            margin-top: 28px;
+            background: #ffffff;
+            border: 1px solid #e2e0d8;
+            border-radius: 26px;
+            padding: 32px;
+            box-shadow: 0 12px 35px rgba(63, 68, 60, 0.07);
+        }
+
+        .gift-icon {
+            font-size: 48px;
+            margin-bottom: 12px;
+        }
+
+        @media (max-width: 800px) {
+            .guide-offer {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .guide-benefits,
+            .guide-form-card {
+                padding: 26px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="site-header">
+    <div class="container nav-wrap">
+
+        <a href="./index.html" class="brand">
+            <span class="brand-mark">🐾</span>
+            <span>Paws & Cuddles</span>
+        </a>
+
+        <nav class="main-nav">
+            <a href="./index.html">Home</a>
+            <a href="./pet-care.html">Pet Care</a>
+            <a href="./free-guide.html" class="active">Free Guide</a>
+            <a href="./products.html">Products</a>
+            <a href="./about.html">About</a>
+            <a href="./contact.html">Contact</a>
+        </nav>
 
     </div>
-</section>
+</header>
 
 
-<section class="section">
-    <div class="container">
+<main>
 
-        <div class="guide-layout">
+    <!-- HERO -->
+    <section class="hero guide-hero">
+        <div class="container hero-content">
 
-            <div class="guide-card">
+            <span class="eyebrow">Free Pet Resource</span>
 
-                <p class="eyebrow">Get the guide</p>
+            <h1>
+                Make Everyday Pet Care Feel Easier
+            </h1>
 
-                <h2>
-                    Make everyday pet care feel a little simpler.
-                </h2>
+            <p>
+                Get our free pet-care guide and discover simple ideas
+                for creating comfortable, enjoyable everyday routines
+                with your pet.
+            </p>
 
-                <p>
-                    Enter your details below to request the Paws & Cuddles
-                    Everyday Pet Care Guide.
-                </p>
+            <a href="#guide-form" class="button">
+                Get My Free Guide
+            </a>
 
-                <form
-                    class="guide-form"
-                    action="https://formspree.io/f/xqparwgv"
-                    method="post"
-                >
+        </div>
+    </section>
 
-                    <input
-                        type="hidden"
-                        name="_subject"
-                        value="New Paws & Cuddles Free Guide Request"
+
+    <!-- MAIN OFFER -->
+    <section class="section">
+        <div class="container">
+
+            <div class="guide-offer">
+
+                <!-- BENEFITS -->
+                <div class="guide-benefits">
+
+                    <span class="eyebrow">What You'll Get</span>
+
+                    <h2>
+                        Helpful ideas for everyday pet life
+                    </h2>
+
+                    <div class="guide-benefit">
+                        <div class="guide-benefit-icon">🐾</div>
+
+                        <div>
+                            <h3>Everyday Care Ideas</h3>
+
+                            <p>
+                                Simple ways to make daily pet routines
+                                easier to organize.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="guide-benefit">
+                        <div class="guide-benefit-icon">🥣</div>
+
+                        <div>
+                            <h3>Feeding & Routine Tips</h3>
+
+                            <p>
+                                Helpful reminders for building
+                                consistent everyday routines.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="guide-benefit">
+                        <div class="guide-benefit-icon">🧸</div>
+
+                        <div>
+                            <h3>Play & Enrichment Ideas</h3>
+
+                            <p>
+                                Ideas for making your pet's environment
+                                more engaging and enjoyable.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div class="guide-benefit">
+                        <div class="guide-benefit-icon">❤️</div>
+
+                        <div>
+                            <h3>Pet-Friendly Lifestyle Ideas</h3>
+
+                            <p>
+                                Practical inspiration for enjoying
+                                everyday life with your companion.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <!-- FREE GIFT -->
+                    <div class="gift-box">
+
+                        <strong>
+                            🎁 Plus a Free Pet Gift
+                        </strong>
+
+                        <p>
+                            We're preparing a bonus
+                            <strong>Pet Care Checklist & Planner</strong>
+                            to complement the guide.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FORM -->
+                <div class="guide-form-card" id="guide-form">
+
+                    <span class="eyebrow">Get Your Free Resource</span>
+
+                    <h2>
+                        Enter your details below
+                    </h2>
+
+                    <p class="form-note">
+                        Tell us where to send your free resource.
+                        Your marketing preferences are completely optional.
+                    </p>
+
+
+                    <form
+                        class="guide-form"
+                        action="https://formspree.io/f/xqparwgv"
+                        method="post"
                     >
 
-                    <div class="form-group">
-                        <label for="full-name">Full Name</label>
+                        <input
+                            type="hidden"
+                            name="_subject"
+                            value="New Paws & Cuddles Free Guide Request"
+                        >
+
+
+                        <label for="full_name">
+                            Full Name
+                        </label>
 
                         <input
                             type="text"
-                            id="full-name"
+                            id="full_name"
                             name="full_name"
                             placeholder="Your full name"
                             autocomplete="name"
                             required
                         >
-                    </div>
 
 
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
+                        <label for="email">
+                            Email Address
+                        </label>
 
                         <input
                             type="email"
@@ -268,65 +372,79 @@
                             autocomplete="email"
                             required
                         >
-                    </div>
 
 
-                    <div class="checkbox-row">
+                        <label class="marketing-option">
 
-                        <input
-                            type="checkbox"
-                            id="marketing"
-                            name="marketing_consent"
-                            value="yes"
-                        >
+                            <input
+                                type="checkbox"
+                                name="marketing_consent"
+                                value="yes"
+                            >
 
-                        <label for="marketing">
-                            I'd like to receive occasional pet-care
-                            updates and resources by email.
+                            <span>
+                                I'd like to receive occasional pet-care
+                                tips, resources and updates from
+                                Paws & Cuddles.
+                            </span>
+
                         </label>
 
-                    </div>
+
+                        <button
+                            type="submit"
+                            class="button guide-submit"
+                        >
+                            Get My Free Guide & Gift
+                        </button>
 
 
-                    <button
-                        type="submit"
-                        class="button button-primary"
-                    >
-                        Request Guide
-                    </button>
+                        <p class="privacy-note">
+                            Your request will be submitted securely
+                            through our form service. The marketing
+                            option above is not required.
+                        </p>
 
-                    <p class="form-note">
-                        Marketing emails are optional and are not required
-                        to request the guide.
-                    </p>
+                    </form>
 
-                    <p class="form-note">
-                        Your request will be submitted securely through
-                        our form service.
-                    </p>
-
-                </form>
+                </div>
 
             </div>
 
+        </div>
+    </section>
 
-            <div class="guide-cover">
 
-                <div class="guide-cover-inner">
+    <!-- GIFT SECTION -->
+    <section class="section section-soft">
+        <div class="container">
 
-                    <div class="guide-icon">📖</div>
+            <div class="gift-section">
 
-                    <h2>
-                        Paws & Cuddles
-                    </h2>
+                <span class="eyebrow">Your Bonus</span>
+
+                <h2>
+                    A little extra for pet lovers
+                </h2>
+
+                <div class="gift-card">
+
+                    <div class="gift-icon">🎁</div>
+
+                    <h3>
+                        Free Pet Care Checklist & Planner
+                    </h3>
 
                     <p>
-                        <strong>Everyday Pet Care Guide</strong>
+                        A simple companion resource designed to help
+                        you keep track of everyday pet-care routines,
+                        reminders and ideas.
                     </p>
 
-                    <p>
-                        A friendly starting point for thoughtful
-                        everyday pet routines.
+                    <p class="form-note">
+                        This bonus resource is being prepared and will
+                        be added to the Paws & Cuddles free-resource
+                        collection.
                     </p>
 
                 </div>
@@ -334,77 +452,106 @@
             </div>
 
         </div>
+    </section>
 
 
-        <div class="guide-note">
+    <!-- CTA -->
+    <section class="section">
+        <div class="container">
 
-            <p>
-                <strong>A quick note:</strong>
-                Pet-care needs can vary considerably between species,
-                ages, environments and individual animals. This guide
-                is intended as general educational information and is
-                not a substitute for professional veterinary advice.
-            </p>
+            <div class="cta-box">
+
+                <span class="eyebrow">Paws & Cuddles</span>
+
+                <h2>
+                    Simple resources for happier everyday pet life.
+                </h2>
+
+                <p>
+                    Explore more pet-care ideas, products and resources.
+                </p>
+
+                <a href="./pet-care.html" class="button">
+                    Explore Pet Care
+                </a>
+
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+
+<footer class="site-footer">
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div>
+                <div class="brand footer-brand">
+                    <span class="brand-mark">🐾</span>
+                    <span>Paws & Cuddles</span>
+                </div>
+
+                <p>
+                    Friendly pet care, lifestyle ideas and useful
+                    resources for everyday pet life.
+                </p>
+            </div>
+
+
+            <div>
+                <h3>Explore</h3>
+
+                <a href="./pet-care.html">Pet Care</a>
+                <a href="./free-guide.html">Free Guide</a>
+                <a href="./products.html">Products</a>
+                <a href="./about.html">About</a>
+                <a href="./contact.html">Contact</a>
+            </div>
+
+
+            <div>
+                <h3>Legal</h3>
+
+                <a href="./privacy.html">Privacy</a>
+                <a href="./terms.html">Terms</a>
+                <a href="./disclosure.html">Product Disclosure</a>
+            </div>
+
+
+            <div>
+                <h3>Contact</h3>
+
+                <a href="mailto:pawscuddles29@gmail.com">
+                    pawscuddles29@gmail.com
+                </a>
+            </div>
 
         </div>
 
-    </div>
-</section>
 
-</main><footer class="site-footer"><div class="container footer-grid">
-
-    <div>
-
-        <a class="brand footer-brand" href="index.html">
-            <span class="brand-mark">🐾</span>
-            <span>Paws & Cuddles</span>
-        </a>
-
-        <p>
-            Warm, practical pet-care education for everyday life with animals.
-        </p>
+        <div class="footer-bottom">
+            <p>
+                © <span data-year></span> Paws & Cuddles.
+                All rights reserved.
+            </p>
+        </div>
 
     </div>
+</footer>
 
 
-    <div>
+<script src="./js/main.js"></script>
 
-        <h3>Explore</h3>
-
-        <a href="index.html">Home</a>
-        <a href="pet-care.html">Pet Care</a>
-        <a href="free-guide.html">Free Guide</a>
-        <a href="products.html">Products</a>
-
-    </div>
-
-
-    <div>
-
-        <h3>Information</h3>
-
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-        <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Terms</a>
-        <a href="disclosure.html">Disclosure</a>
-
-    </div>
-
-</div>
-
-
-<div class="container footer-bottom">
-
-    <span>
-        &copy; <span data-year></span> Paws & Cuddles
-    </span>
-
-    <span>
-        Made with care for pet families.
-    </span>
-
-</div>
-
-</footer><script src="js/main.js"></script></body>
+</body>
 </html>
+
+One important detail
+
+I've deliberately called the bonus “Free Pet Care Checklist & Planner” and said it's being prepared. That way, we're not promising visitors a file that doesn't exist yet.
+
+Your Formspree endpoint remains exactly the same, so the form should continue working as before.
+
+Next action: paste this into GitHub's "free-guide.html", tap Commit changes, and then open the live Free Guide page.
