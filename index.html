@@ -49,12 +49,13 @@
             line-height: 1.7;
         }
 
-        a {
-            color: var(--sage-dark);
-            text-decoration: none;
+        img {
+            max-width: 100%;
+            display: block;
         }
 
-        a:hover {
+        a {
+            color: var(--sage-dark);
             text-decoration: none;
         }
 
@@ -111,28 +112,24 @@
             min-height: 620px;
             display: flex;
             align-items: center;
+            padding: 80px 0;
             background:
-                radial-gradient(
-                    circle at 85% 25%,
-                    rgba(154, 118, 89, 0.18),
-                    transparent 24%
-                ),
-                radial-gradient(
-                    circle at 75% 80%,
-                    rgba(113, 128, 107, 0.20),
-                    transparent 30%
-                ),
                 linear-gradient(
-                    135deg,
-                    #f7f1e7,
-                    #e9efe5
-                );
-            padding: 100px 0;
+                    90deg,
+                    rgba(247, 241, 231, 0.96) 0%,
+                    rgba(247, 241, 231, 0.86) 38%,
+                    rgba(247, 241, 231, 0.35) 68%,
+                    rgba(247, 241, 231, 0.08) 100%
+                ),
+                url("images/hero/179104249002.jpg") center/cover no-repeat;
         }
 
         .hero .container {
-            max-width: 900px;
-            text-align: center;
+            max-width: 1120px;
+        }
+
+        .hero-content {
+            max-width: 650px;
         }
 
         .eyebrow {
@@ -145,8 +142,7 @@
         }
 
         .hero h1 {
-            max-width: 850px;
-            margin: 0 auto 24px;
+            margin: 0 0 24px;
             color: var(--text);
             font-size: clamp(2.7rem, 7vw, 5.5rem);
             line-height: 1.05;
@@ -154,15 +150,14 @@
         }
 
         .hero-description {
-            max-width: 690px;
-            margin: 0 auto 32px;
+            max-width: 650px;
+            margin: 0 0 32px;
             color: var(--muted);
             font-size: 1.15rem;
         }
 
         .hero-actions {
             display: flex;
-            justify-content: center;
             flex-wrap: wrap;
             gap: 14px;
         }
@@ -233,7 +228,7 @@
             font-size: 1.05rem;
         }
 
-        /* CARDS */
+        /* IMAGE CARDS */
 
         .card-grid {
             display: grid;
@@ -242,7 +237,7 @@
         }
 
         .card {
-            padding: 30px;
+            overflow: hidden;
             background: var(--white);
             border: 1px solid var(--border);
             border-radius: var(--radius);
@@ -252,6 +247,31 @@
 
         .card:hover {
             transform: translateY(-4px);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 210px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 26px;
+        }
+
+        .card h3 {
+            margin: 0 0 10px;
+            color: var(--sage-dark);
+            font-size: 1.3rem;
+        }
+
+        .card p {
+            margin: 0;
+            color: var(--muted);
+        }
+
+        .emoji-card {
+            padding: 30px;
         }
 
         .card-icon {
@@ -266,17 +286,6 @@
             font-size: 1.7rem;
         }
 
-        .card h3 {
-            margin: 0 0 10px;
-            color: var(--sage-dark);
-            font-size: 1.3rem;
-        }
-
-        .card p {
-            margin: 0;
-            color: var(--muted);
-        }
-
         /* FEATURE */
 
         .feature {
@@ -284,6 +293,14 @@
             grid-template-columns: 1fr 1fr;
             gap: 45px;
             align-items: center;
+        }
+
+        .feature-image {
+            width: 100%;
+            min-height: 400px;
+            object-fit: cover;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
         }
 
         .feature-box {
@@ -340,43 +357,45 @@
         }
 
         .guide-art {
+            overflow: hidden;
             min-height: 280px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 30px;
             border-radius: var(--radius);
             background: var(--sage-light);
             box-shadow: var(--shadow);
         }
 
-        .guide-card {
-            width: 220px;
-            padding: 35px 25px;
-            background: var(--white);
-            border: 1px solid var(--border);
-            border-radius: 18px;
-            box-shadow: var(--shadow);
-            text-align: center;
+        .guide-art img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
         }
 
-        .guide-card span {
-            display: block;
-            margin-bottom: 12px;
-            font-size: 3rem;
-        }
+        /* PRODUCTS */
 
-        .guide-card strong {
-            color: var(--sage-dark);
+        .product-image {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
         }
 
         /* ABOUT */
 
         .about-box {
-            max-width: 850px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 45px;
+            align-items: center;
         }
 
-        .about-box p {
+        .about-image {
+            width: 100%;
+            height: 380px;
+            object-fit: cover;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .about-text p {
             color: var(--muted);
             font-size: 1.05rem;
         }
@@ -463,13 +482,13 @@
             }
 
             .feature,
-            .guide-box {
+            .guide-box,
+            .about-box {
                 grid-template-columns: 1fr;
             }
 
             .hero {
                 min-height: auto;
-                padding: 80px 0;
             }
         }
 
@@ -499,6 +518,12 @@
 
             .hero {
                 padding: 70px 0;
+                background:
+                    linear-gradient(
+                        rgba(247, 241, 231, 0.86),
+                        rgba(247, 241, 231, 0.88)
+                    ),
+                    url("images/hero/179104249002.jpg") center/cover no-repeat;
             }
 
             .hero h1 {
@@ -525,10 +550,6 @@
                 grid-template-columns: 1fr;
             }
 
-            .pet-list {
-                grid-template-columns: 1fr;
-            }
-
             .feature-box,
             .contact-box {
                 padding: 25px;
@@ -537,6 +558,12 @@
             .footer-grid {
                 grid-template-columns: 1fr;
                 gap: 25px;
+            }
+
+            .about-image,
+            .feature-image {
+                min-height: 280px;
+                height: 280px;
             }
         }
     </style>
@@ -552,19 +579,12 @@
         </a>
 
         <nav class="main-nav" aria-label="Main navigation">
-
             <a href="index.html">Home</a>
-
             <a href="pet-care.html">Pet Care</a>
-
             <a href="free-guide.html">Free Guide</a>
-
             <a href="products.html">Products</a>
-
             <a href="about.html">About</a>
-
             <a href="contact.html">Contact</a>
-
         </nav>
 
     </div>
@@ -579,28 +599,32 @@
 
         <div class="container">
 
-            <p class="eyebrow">
-                Everyday care for happier pets
-            </p>
+            <div class="hero-content">
 
-            <h1>
-                Simple guidance for the pets you love.
-            </h1>
+                <p class="eyebrow">
+                    Everyday care for happier pets
+                </p>
 
-            <p class="hero-description">
-                Paws & Cuddles helps pet owners make everyday care
-                feel simpler, calmer, and more enjoyable.
-            </p>
+                <h1>
+                    Simple guidance for the pets you love.
+                </h1>
 
-            <div class="hero-actions">
+                <p class="hero-description">
+                    Paws & Cuddles helps pet owners make everyday care
+                    feel simpler, calmer, and more enjoyable.
+                </p>
 
-                <a href="pet-care.html" class="button">
-                    Explore Pet Care
-                </a>
+                <div class="hero-actions">
 
-                <a href="free-guide.html" class="button button-secondary">
-                    Get the Free Guide
-                </a>
+                    <a href="pet-care.html" class="button">
+                        Explore Pet Care
+                    </a>
+
+                    <a href="free-guide.html" class="button button-secondary">
+                        Get the Free Guide
+                    </a>
+
+                </div>
 
             </div>
 
@@ -638,67 +662,101 @@
 
                 <article class="card">
 
-                    <div class="card-icon">🐶</div>
+                    <img
+                        class="card-image"
+                        src="images/pets/1791042490020.jpg"
+                        alt="Happy dog relaxing at home"
+                    >
 
-                    <h3>Dogs</h3>
+                    <div class="card-content">
 
-                    <p>
-                        Everyday ideas for routines, exercise,
-                        enrichment, grooming, and comfortable
-                        home life.
-                    </p>
+                        <h3>Dogs</h3>
 
-                </article>
+                        <p>
+                            Everyday ideas for routines, exercise,
+                            enrichment, grooming, and comfortable
+                            home life.
+                        </p>
 
-
-                <article class="card">
-
-                    <div class="card-icon">🐱</div>
-
-                    <h3>Cats</h3>
-
-                    <p>
-                        Helpful foundations for feeding,
-                        enrichment, grooming, play, and
-                        comfortable spaces.
-                    </p>
+                    </div>
 
                 </article>
 
 
                 <article class="card">
 
-                    <div class="card-icon">🐰</div>
+                    <img
+                        class="card-image"
+                        src="images/pets/1791044368545.jpg"
+                        alt="Calm cat relaxing at home"
+                    >
 
-                    <h3>Rabbits</h3>
+                    <div class="card-content">
 
-                    <p>
-                        Practical considerations for housing,
-                        feeding, exercise, enrichment, and
-                        everyday care.
-                    </p>
+                        <h3>Cats</h3>
 
-                </article>
+                        <p>
+                            Helpful foundations for feeding,
+                            enrichment, grooming, play, and
+                            comfortable spaces.
+                        </p>
 
-
-                <article class="card">
-
-                    <div class="card-icon">🐦</div>
-
-                    <h3>Birds</h3>
-
-                    <p>
-                        Starting points for safe environments,
-                        enrichment, feeding routines, and
-                        daily interaction.
-                    </p>
+                    </div>
 
                 </article>
 
 
                 <article class="card">
 
-                    <div class="card-icon">🐹</div>
+                    <img
+                        class="card-image"
+                        src="images/pets/1791044374200.jpg"
+                        alt="Healthy rabbit in an indoor habitat"
+                    >
+
+                    <div class="card-content">
+
+                        <h3>Rabbits</h3>
+
+                        <p>
+                            Practical considerations for housing,
+                            feeding, exercise, enrichment, and
+                            everyday care.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="card">
+
+                    <img
+                        class="card-image"
+                        src="images/pets/1791044380316.jpg"
+                        alt="Colorful pet bird"
+                    >
+
+                    <div class="card-content">
+
+                        <h3>Birds</h3>
+
+                        <p>
+                            Starting points for safe environments,
+                            enrichment, feeding routines, and
+                            daily interaction.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="card emoji-card">
+
+                    <div class="card-icon">
+                        🐹
+                    </div>
 
                     <h3>Small Pets</h3>
 
@@ -713,15 +771,23 @@
 
                 <article class="card">
 
-                    <div class="card-icon">🦎</div>
+                    <img
+                        class="card-image"
+                        src="images/pets/1791044478403.jpg"
+                        alt="Healthy pet lizard"
+                    >
 
-                    <h3>Reptiles & Aquatic Pets</h3>
+                    <div class="card-content">
 
-                    <p>
-                        Learn about species-specific environments,
-                        feeding routines, enrichment, and
-                        responsible care.
-                    </p>
+                        <h3>Reptiles & Aquatic Pets</h3>
+
+                        <p>
+                            Learn about species-specific environments,
+                            feeding routines, enrichment, and
+                            responsible care.
+                        </p>
+
+                    </div>
 
                 </article>
 
@@ -740,6 +806,12 @@
 
             <div class="feature">
 
+                <img
+                    class="feature-image"
+                    src="images/care/1791045524822.jpg"
+                    alt="Pet feeding area with food and water bowls"
+                >
+
                 <div>
 
                     <p class="eyebrow">
@@ -756,138 +828,28 @@
                         grooming, play, rest, and attention.
                     </p>
 
-                    <a href="pet-care.html" class="button">
-                        Explore Care Resources
-                    </a>
+                    <div class="feature-box">
 
-                </div>
+                        <ul class="pet-list">
 
+                            <li>🍽️ Feeding</li>
 
-                <div class="feature-box">
+                            <li>🧼 Grooming</li>
 
-                    <ul class="pet-list">
+                            <li>🏃 Exercise</li>
 
-                        <li>🍽️ Feeding</li>
+                            <li>🧸 Enrichment</li>
 
-                        <li>🧼 Grooming</li>
+                            <li>🏠 Safe spaces</li>
 
-                        <li>🏃 Exercise</li>
+                            <li>❤️ Daily connection</li>
 
-                        <li>🧸 Enrichment</li>
+                        </ul>
 
-                        <li>🏠 Safe spaces</li>
-
-                        <li>❤️ Daily connection</li>
-
-                    </ul>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- FREE GUIDE -->
-
-    <section class="section guide">
-
-        <div class="container">
-
-            <div class="guide-box">
-
-                <div>
-
-                    <p class="eyebrow">
-                        Free Guide
-                    </p>
-
-                    <h2>
-                        A handy starting point for everyday pet care.
-                    </h2>
-
-                    <p>
-                        We're creating a simple resource to help
-                        pet families organize everyday routines
-                        and think through their companion's needs.
-                    </p>
-
-                    <a href="free-guide.html" class="button">
-                        Get the Free Guide
-                    </a>
-
-                </div>
-
-
-                <div class="guide-art">
-
-                    <div class="guide-card">
-
-                        <span>📖</span>
-
-                        <strong>
-                            Paws & Cuddles
-                        </strong>
-
-                        <p>
-                            Everyday Pet Care Guide
-                        </p>
+                        <a href="pet-care.html" class="button">
+                            Explore Care Resources
+                        </a>
 
                     </div>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- PRODUCTS -->
-
-    <section class="section section-sage">
-
-        <div class="container">
-
-            <div class="section-heading">
-
-                <p class="eyebrow">
-                    Pet Products
-                </p>
-
-                <h2>
-                    Useful things for everyday pet life.
-                </h2>
-
-                <p>
-                    Learn what to consider when choosing grooming,
-                    feeding, enrichment, and everyday pet products.
-                </p>
-
-            </div>
-
-
-            <div class="card-grid">
-
-                <article class="card">
-
-                    <div class="card-icon">🧼</div>
-
-                    <h3>Grooming</h3>
-
-                    <p>
-                        Consider comfort, suitability, materials,
-                        cleaning, and safe use.
-                    </p>
-
-                </article>
-
-
-                <article class="card">
-
-                    <div class="card-icon">🥣</div>
 
     
