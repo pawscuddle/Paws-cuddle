@@ -1,27 +1,560 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Paws & Cuddles | Simple, Loving Pet Care</title>
 
-<meta
-    name="description"
-    content="Paws & Cuddles shares simple, practical pet-care guidance for dogs, cats, rabbits, birds, small pets, reptiles, and aquatic pets."
->
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-<link rel="stylesheet" href="CSS/styles.css">
+    <title>Paws & Cuddles | Simple, Loving Pet Care</title>
 
-</head><body><!-- Header -->
+    <meta
+        name="description"
+        content="Paws & Cuddles shares simple, practical pet-care guidance for dogs, cats, rabbits, birds, small pets, reptiles, and aquatic pets."
+    >
+
+    <style>
+        :root {
+            --cream: #f7f1e7;
+            --cream-dark: #eee4d5;
+            --white: #fffdf9;
+            --sage: #71806b;
+            --sage-dark: #4d5d49;
+            --sage-light: #e4ebe0;
+            --brown: #9a7659;
+            --brown-light: #f0e3d5;
+            --text: #30352f;
+            --muted: #6d746b;
+            --border: #ddd5c8;
+            --shadow: 0 15px 35px rgba(50, 55, 48, 0.10);
+            --radius: 22px;
+            --max-width: 1120px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background: var(--white);
+            color: var(--text);
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.7;
+        }
+
+        a {
+            color: var(--sage-dark);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(92%, var(--max-width));
+            margin: 0 auto;
+        }
+
+        /* HEADER */
+
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 253, 249, 0.97);
+            border-bottom: 1px solid var(--border);
+            backdrop-filter: blur(10px);
+        }
+
+        .site-header .container {
+            min-height: 76px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .brand {
+            color: var(--sage-dark);
+            font-size: 1.3rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+        }
+
+        .main-nav {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .main-nav a {
+            color: var(--text);
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+
+        .main-nav a:hover {
+            color: var(--sage-dark);
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 620px;
+            display: flex;
+            align-items: center;
+            background:
+                radial-gradient(
+                    circle at 85% 25%,
+                    rgba(154, 118, 89, 0.18),
+                    transparent 24%
+                ),
+                radial-gradient(
+                    circle at 75% 80%,
+                    rgba(113, 128, 107, 0.20),
+                    transparent 30%
+                ),
+                linear-gradient(
+                    135deg,
+                    #f7f1e7,
+                    #e9efe5
+                );
+            padding: 100px 0;
+        }
+
+        .hero .container {
+            max-width: 900px;
+            text-align: center;
+        }
+
+        .eyebrow {
+            margin: 0 0 14px;
+            color: var(--sage-dark);
+            font-size: 0.8rem;
+            font-weight: 800;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            max-width: 850px;
+            margin: 0 auto 24px;
+            color: var(--text);
+            font-size: clamp(2.7rem, 7vw, 5.5rem);
+            line-height: 1.05;
+            letter-spacing: -0.055em;
+        }
+
+        .hero-description {
+            max-width: 690px;
+            margin: 0 auto 32px;
+            color: var(--muted);
+            font-size: 1.15rem;
+        }
+
+        .hero-actions {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 14px;
+        }
+
+        /* BUTTONS */
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 48px;
+            padding: 12px 22px;
+            border: 1px solid var(--sage-dark);
+            border-radius: 999px;
+            background: var(--sage-dark);
+            color: #ffffff;
+            font-weight: 700;
+            transition: 0.2s ease;
+        }
+
+        .button:hover {
+            background: var(--sage);
+            border-color: var(--sage);
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        .button-secondary {
+            background: transparent;
+            color: var(--sage-dark);
+        }
+
+        .button-secondary:hover {
+            background: var(--sage-light);
+            color: var(--sage-dark);
+        }
+
+        /* SECTIONS */
+
+        .section {
+            padding: 90px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .section-soft {
+            background: var(--cream);
+        }
+
+        .section-sage {
+            background: var(--sage-light);
+        }
+
+        .section-heading {
+            max-width: 760px;
+            margin-bottom: 38px;
+        }
+
+        .section-heading h2 {
+            margin: 0 0 15px;
+            font-size: clamp(2rem, 4vw, 3rem);
+            line-height: 1.15;
+            letter-spacing: -0.035em;
+        }
+
+        .section-heading p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 1.05rem;
+        }
+
+        /* CARDS */
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .card {
+            padding: 30px;
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            transition: 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+        }
+
+        .card-icon {
+            width: 54px;
+            height: 54px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            border-radius: 16px;
+            background: var(--brown-light);
+            font-size: 1.7rem;
+        }
+
+        .card h3 {
+            margin: 0 0 10px;
+            color: var(--sage-dark);
+            font-size: 1.3rem;
+        }
+
+        .card p {
+            margin: 0;
+            color: var(--muted);
+        }
+
+        /* FEATURE */
+
+        .feature {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 45px;
+            align-items: center;
+        }
+
+        .feature-box {
+            padding: 38px;
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .feature-box h2 {
+            margin-top: 0;
+            font-size: 2.3rem;
+            line-height: 1.15;
+        }
+
+        .feature-box p {
+            color: var(--muted);
+        }
+
+        .pet-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin: 25px 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .pet-list li {
+            padding: 12px 15px;
+            background: var(--sage-light);
+            border-radius: 12px;
+            color: var(--sage-dark);
+            font-weight: 700;
+        }
+
+        /* GUIDE */
+
+        .guide {
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--brown-light),
+                    var(--cream)
+                );
+        }
+
+        .guide-box {
+            display: grid;
+            grid-template-columns: 1fr 0.75fr;
+            gap: 45px;
+            align-items: center;
+        }
+
+        .guide-art {
+            min-height: 280px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+            border-radius: var(--radius);
+            background: var(--sage-light);
+            box-shadow: var(--shadow);
+        }
+
+        .guide-card {
+            width: 220px;
+            padding: 35px 25px;
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+
+        .guide-card span {
+            display: block;
+            margin-bottom: 12px;
+            font-size: 3rem;
+        }
+
+        .guide-card strong {
+            color: var(--sage-dark);
+        }
+
+        /* ABOUT */
+
+        .about-box {
+            max-width: 850px;
+        }
+
+        .about-box p {
+            color: var(--muted);
+            font-size: 1.05rem;
+        }
+
+        /* CONTACT */
+
+        .contact-box {
+            padding: 40px;
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .contact-box p {
+            color: var(--muted);
+        }
+
+        .email {
+            display: inline-block;
+            margin: 10px 0 25px;
+            font-weight: 800;
+            font-size: 1.1rem;
+        }
+
+        /* FOOTER */
+
+        .site-footer {
+            padding: 55px 0 25px;
+            background: #343c33;
+            color: #ffffff;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 40px;
+        }
+
+        .footer-brand {
+            color: #ffffff;
+        }
+
+        .site-footer h3 {
+            margin-top: 0;
+        }
+
+        .site-footer p {
+            color: #dce2d9;
+        }
+
+        .site-footer a {
+            display: block;
+            margin: 8px 0;
+            color: #dce2d9;
+        }
+
+        .site-footer a:hover {
+            color: #ffffff;
+        }
+
+        .footer-bottom {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.15);
+            color: #cbd2c9;
+            font-size: 0.9rem;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 850px) {
+
+            .main-nav {
+                gap: 13px;
+            }
+
+            .main-nav a {
+                font-size: 0.82rem;
+            }
+
+            .card-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .feature,
+            .guide-box {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                min-height: auto;
+                padding: 80px 0;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .container {
+                width: min(90%, var(--max-width));
+            }
+
+            .site-header .container {
+                min-height: auto;
+                padding: 14px 0;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .main-nav {
+                width: 100%;
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 7px 13px;
+            }
+
+            .main-nav a {
+                font-size: 0.77rem;
+            }
+
+            .hero {
+                padding: 70px 0;
+            }
+
+            .hero h1 {
+                font-size: 2.7rem;
+            }
+
+            .hero-description {
+                font-size: 1rem;
+            }
+
+            .hero-actions {
+                flex-direction: column;
+            }
+
+            .button {
+                width: 100%;
+            }
+
+            .section {
+                padding: 60px 0;
+            }
+
+            .card-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pet-list {
+                grid-template-columns: 1fr;
+            }
+
+            .feature-box,
+            .contact-box {
+                padding: 25px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
 <header class="site-header">
     <div class="container">
 
         <a href="index.html" class="brand">
-            Paws & Cuddles
+            🐾 Paws & Cuddles
         </a>
 
         <nav class="main-nav" aria-label="Main navigation">
             <a href="#home">Home</a>
             <a href="#pet-care">Pet Care</a>
-            <a href="#free-guide">Free Guide</a>
+            <a href="#guide">Free Guide</a>
             <a href="#products">Products</a>
             <a href="#about">About</a>
             <a href="#contact">Contact</a>
@@ -30,20 +563,22 @@
     </div>
 </header>
 
-
 <main>
 
-    <!-- Hero -->
+    <!-- HERO -->
+
     <section class="hero" id="home">
         <div class="container">
 
-            <p class="eyebrow">Everyday care for happier pets</p>
+            <p class="eyebrow">
+                Everyday care for happier pets
+            </p>
 
             <h1>
                 Simple guidance for the pets you love.
             </h1>
 
-            <p>
+            <p class="hero-description">
                 Paws & Cuddles helps pet owners make everyday care
                 feel simpler, calmer, and more enjoyable.
             </p>
@@ -53,7 +588,7 @@
                     Explore Pet Care
                 </a>
 
-                <a href="#free-guide" class="button button-secondary">
+                <a href="#guide" class="button button-secondary">
                     Get the Free Guide
                 </a>
             </div>
@@ -62,155 +597,265 @@
     </section>
 
 
-    <!-- Pet Care -->
-    <section class="placeholder-section" id="pet-care">
+    <!-- PET CARE -->
+
+    <section class="section" id="pet-care">
+
         <div class="container">
 
-            <p class="eyebrow">Pet Care</p>
+            <div class="section-heading">
 
-            <h2>
-                Helpful care ideas for many kinds of pets
-            </h2>
+                <p class="eyebrow">
+                    Pet Care
+                </p>
 
-            <p>
-                Discover practical information about feeding, grooming,
-                exercise, enrichment, routines, and everyday pet care.
-            </p>
-
-            <div class="card">
-                <h3>More pet-care resources coming soon</h3>
+                <h2>
+                    Care ideas for the animals who share your home.
+                </h2>
 
                 <p>
-                    We are building a collection of simple resources
-                    for dogs, cats, rabbits, birds, small pets,
-                    reptiles, and aquatic pets.
+                    Explore simple starting points for feeding,
+                    grooming, exercise, enrichment, routines,
+                    and everyday pet life.
                 </p>
+
+            </div>
+
+            <div class="card-grid">
+
+                <article class="card">
+                    <div class="card-icon">🐶</div>
+
+                    <h3>Dogs</h3>
+
+                    <p>
+                        Everyday ideas for routines, exercise,
+                        enrichment, grooming, and comfortable
+                        home life.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <div class="card-icon">🐱</div>
+
+                    <h3>Cats</h3>
+
+                    <p>
+                        Helpful foundations for feeding,
+                        enrichment, grooming, play, and
+                        comfortable spaces.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <div class="card-icon">🐰</div>
+
+                    <h3>Rabbits</h3>
+
+                    <p>
+                        Practical considerations for housing,
+                        feeding, exercise, enrichment, and
+                        everyday care.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <div class="card-icon">🐦</div>
+
+                    <h3>Birds</h3>
+
+                    <p>
+                        Starting points for safe environments,
+                        enrichment, feeding routines, and
+                        daily interaction.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <div class="card-icon">🐹</div>
+
+                    <h3>Small Pets</h3>
+
+                    <p>
+                        Simple guidance for small companions,
+                        their environments, enrichment, and
+                        daily routines.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <div class="card-icon">🦎</div>
+
+                    <h3>Reptiles & Aquatic Pets</h3>
+
+                    <p>
+                        Learn about species-specific environments,
+                        feeding routines, enrichment, and
+                        responsible care.
+                    </p>
+                </article>
+
             </div>
 
         </div>
+
     </section>
 
 
-    <!-- Free Guide -->
-    <section class="placeholder-section" id="free-guide">
+    <!-- ROUTINES -->
+
+    <section class="section section-soft">
+
         <div class="container">
 
-            <p class="eyebrow">Free Guide</p>
+            <div class="feature">
 
-            <h2>
-                A simple guide for better everyday pet care
-            </h2>
+                <div>
 
-            <p>
-                Our free guide will bring together useful ideas to help
-                pet owners create comfortable, healthy, and enjoyable
-                routines for their pets.
-            </p>
+                    <p class="eyebrow">
+                        Everyday routines
+                    </p>
 
-            <a href="#contact" class="button">
-                Learn More
-            </a>
+                    <h2>
+                        Small routines can make pet life easier.
+                    </h2>
 
-        </div>
-    </section>
+                    <p>
+                        Good pet care is built from many everyday
+                        moments: meals, clean spaces, movement,
+                        grooming, play, rest, and attention.
+                    </p>
 
+                    <a href="pet-care.html" class="button">
+                        Explore Care Resources
+                    </a>
 
-    <!-- Products -->
-    <section class="placeholder-section" id="products">
-        <div class="container">
+                </div>
 
-            <p class="eyebrow">Pet Products</p>
+                <div class="feature-box">
 
-            <h2>
-                Useful products for pets and their people
-            </h2>
+                    <ul class="pet-list">
 
-            <p>
-                This section will feature carefully selected pet products,
-                helpful ideas, and practical resources.
-            </p>
+                        <li>🍽️ Feeding</li>
 
-            <div class="card">
-                <h3>Product recommendations coming soon</h3>
+                        <li>🧼 Grooming</li>
 
-                <p>
-                    Product information and any required disclosures
-                    will be added before recommendations are published.
-                </p>
+                        <li>🏃 Exercise</li>
+
+                        <li>🧸 Enrichment</li>
+
+                        <li>🏠 Safe spaces</li>
+
+                        <li>❤️ Daily connection</li>
+
+                    </ul>
+
+                </div>
+
             </div>
 
         </div>
+
     </section>
 
 
-    <!-- About -->
-    <section class="placeholder-section" id="about">
+    <!-- FREE GUIDE -->
+
+    <section class="section guide" id="guide">
+
         <div class="container">
 
-            <p class="eyebrow">About Paws & Cuddles</p>
+            <div class="guide-box">
 
-            <h2>
-                Built around everyday moments with pets
-            </h2>
+                <div>
 
-            <p>
-                Paws & Cuddles is being created to make pet-care
-                information easier to understand and easier to use
-                in everyday life.
-            </p>
+                    <p class="eyebrow">
+                        Free Guide
+                    </p>
 
-            <p>
-                Our goal is to provide friendly, practical resources
-                for pet owners and their companions.
-            </p>
+                    <h2>
+                        A handy starting point for everyday pet care.
+                    </h2>
 
-        </div>
-    </section>
+                    <p>
+                        We're creating a simple resource to help
+                        pet families organize everyday routines
+                        and think through their companion's needs.
+                    </p>
 
+                    <a href="free-guide.html" class="button">
+                        Get the Free Guide
+                    </a>
 
-    <!-- Contact -->
-    <section class="placeholder-section" id="contact">
-        <div class="container">
+                </div>
 
-            <p class="eyebrow">Contact</p>
+                <div class="guide-art">
 
-            <h2>
-                We'd love to hear from you
-            </h2>
+                    <div class="guide-card">
 
-            <p>
-                Questions, suggestions, or partnership inquiries
-                can be added here later.
-            </p>
+                        <span>📖</span>
 
-            <div class="card">
-                <h3>Contact information coming soon</h3>
+                        <strong>
+                            Paws & Cuddles
+                        </strong>
 
-                <p>
-                    A contact form and business contact details
-                    will be added in a later step.
-                </p>
+                        <p>
+                            Everyday Pet Care Guide
+                        </p>
+
+                    </div>
+
+                </div>
+
             </div>
 
         </div>
+
     </section>
 
-</main>
 
+    <!-- PRODUCTS -->
 
-<!-- Footer -->
-<footer class="site-footer">
-    <div class="container">
+    <section class="section" id="products">
 
-        <p>
-            &copy; 2026 Paws & Cuddles. All rights reserved.
-        </p>
+        <div class="container">
 
-    </div>
-</footer>
+            <div class="section-heading">
 
+                <p class="eyebrow">
+                    Pet Products
+                </p>
 
-<script src="js/main.js"></script>
+                <h2>
+                    Useful things for everyday pet life.
+                </h2>
 
-</body>
-</html>
+                <p>
+                    Learn what to consider when choosing grooming,
+                    feeding, enrichment, and everyday pet products.
+                </p>
+
+            </div>
+
+            <div class="card-grid">
+
+                <article class="card">
+
+                    <div class="card-icon">🧼</div>
+
+                    <h3>Grooming</h3>
+
+                    <p>
+                        Consider comfort, suitability, materials,
+                        cleaning, and safe use.
+                    </p>
+
+                </article>
+
+                <article class="card">
+
+                    <div class="card-icon">🥣</div>
+
+                    <h3>Feeding</h3>
+
+       
