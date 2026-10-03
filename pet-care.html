@@ -1,282 +1,373 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Explore practical pet-care education for dogs, cats, rabbits, birds, small pets, reptiles and aquatic pets.">
-  <meta name="theme-color" content="#65765f">
-  <title>Pet Care | Paws &amp; Cuddles</title>
-  <link rel="stylesheet" href="CSS/styles.css">
-  <script src="js/main.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pet Care | Paws & Cuddles</title>
+
+    <meta name="description" content="Practical pet-care guidance for dogs, cats, rabbits, birds, small pets, reptiles and aquatic pets.">
+
+    <link rel="stylesheet" href="CSS/styles.css">
+
+    <style>
+        .page-hero {
+            padding: 80px 20px 60px;
+            background: linear-gradient(135deg, #f7f0e4, #e7efe5);
+            text-align: center;
+        }
+
+        .page-hero h1 {
+            max-width: 800px;
+            margin: 0 auto 18px;
+            font-size: clamp(2.2rem, 5vw, 4rem);
+            line-height: 1.1;
+        }
+
+        .page-hero p {
+            max-width: 720px;
+            margin: auto;
+            color: #5f655f;
+            font-size: 1.08rem;
+        }
+
+        .care-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+            margin-top: 35px;
+        }
+
+        .care-card {
+            background: #fff;
+            border: 1px solid #e2e3dc;
+            border-radius: 22px;
+            padding: 28px;
+            box-shadow: 0 10px 30px rgba(63, 68, 60, 0.07);
+        }
+
+        .care-icon {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+        }
+
+        .care-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .care-card p {
+            color: #666b65;
+            line-height: 1.7;
+        }
+
+        .routine-section {
+            background: #f7f5ef;
+        }
+
+        .routine-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+            margin-top: 30px;
+        }
+
+        .routine-card {
+            background: white;
+            padding: 22px;
+            border-radius: 18px;
+            border: 1px solid #e2e3dc;
+        }
+
+        .routine-card h3 {
+            font-size: 1.05rem;
+            margin-bottom: 8px;
+        }
+
+        .routine-card p {
+            color: #666b65;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        .care-note {
+            margin-top: 35px;
+            padding: 25px;
+            border-radius: 18px;
+            background: #e8efe8;
+            border: 1px solid #d5e1d5;
+        }
+
+        .care-note p {
+            margin: 0;
+            color: #465047;
+            line-height: 1.7;
+        }
+
+        @media (max-width: 850px) {
+            .care-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .routine-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .care-grid,
+            .routine-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .page-hero {
+                padding: 60px 20px 45px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-  <header class="site-header">
+<header class="site-header">
     <div class="container nav-wrap">
-      <a class="brand" href="index.html" aria-label="Paws & Cuddles home">
-        <img src="images/branding/logo-mark.svg" alt="" class="brand-mark">
-        <span>Paws &amp; Cuddles</span>
-      </a>
 
-      <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">
-        Menu
-      </button>
+        <a class="brand" href="index.html" aria-label="Paws & Cuddles home">
+            <span class="brand-mark">🐾</span>
+            <span>Paws & Cuddles</span>
+        </a>
 
-      <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
-        <a href="index.html">Home</a>
-        <a href="pet-care.html">Pet Care</a>
-        <a href="free-guide.html">Free Guide</a>
-        <a href="products.html">Products</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+        <nav class="site-nav" aria-label="Primary navigation">
+            <a href="index.html">Home</a>
+            <a href="pet-care.html">Pet Care</a>
+            <a href="free-guide.html">Free Guide</a>
+            <a href="products.html">Products</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
     </div>
-  </header>
+</header>
 
-  <main>
+
+<main>
 
     <section class="page-hero">
-      <div class="container narrow">
-        <p class="eyebrow">Pet care library</p>
-        <h1>Practical foundations for everyday pet life.</h1>
-        <p class="lead">
-          Use these starting points to organize routines around your companion's
-          species, environment and individual needs.
-        </p>
-      </div>
+        <div class="container">
+
+            <p class="eyebrow">Pet care</p>
+
+            <h1>
+                Practical foundations for everyday pet life.
+            </h1>
+
+            <p>
+                Explore simple starting points for caring for different kinds
+                of companion animals while keeping their individual needs in mind.
+            </p>
+
+        </div>
     </section>
+
 
     <section class="section">
-      <div class="container">
+        <div class="container">
 
-        <div class="section-heading">
-          <p class="eyebrow">By pet type</p>
-          <h2>Start with the needs that matter most.</h2>
-          <p>
-            Every animal is different. These general guides are designed to
-            help pet families think about everyday routines, enrichment,
-            comfort and responsible care.
-          </p>
-        </div>
+            <p class="eyebrow">Explore by pet</p>
 
-        <div class="card-grid">
+            <h2>Care ideas for different companions</h2>
 
-          <article class="card">
-            <h3>Dogs</h3>
-            <p>
-              Build predictable routines around appropriate movement,
-              positive interactions, rest, grooming and everyday observation.
-            </p>
-            <p class="note">
-              Needs can vary by age, breed, size, health and individual dog.
-            </p>
-          </article>
+            <div class="care-grid">
 
-          <article class="card">
-            <h3>Cats</h3>
-            <p>
-              Support natural behaviors with safe spaces, play, scratching
-              opportunities, comfortable resting areas and calm daily rhythms.
-            </p>
-            <p class="note">
-              Individual personality, age and environment can affect what works best.
-            </p>
-          </article>
+                <article class="care-card">
+                    <div class="care-icon">🐶</div>
+                    <h3>Dogs</h3>
+                    <p>
+                        Build routines around balanced feeding, exercise,
+                        enrichment, grooming, rest and positive interaction.
+                    </p>
+                </article>
 
-          <article class="card">
-            <h3>Rabbits</h3>
-            <p>
-              Think about suitable housing, gentle handling, appropriate food,
-              clean living areas and opportunities for natural behaviors.
-            </p>
-            <p class="note">
-              Rabbit care can be quite specialized, so species-appropriate
-              guidance is important.
-            </p>
-          </article>
+                <article class="care-card">
+                    <div class="care-icon">🐱</div>
+                    <h3>Cats</h3>
+                    <p>
+                        Think about nutrition, litter areas, scratching,
+                        play, grooming, quiet spaces and opportunities to explore.
+                    </p>
+                </article>
 
-          <article class="card">
-            <h3>Birds</h3>
-            <p>
-              Consider species-appropriate housing, social needs, enrichment,
-              safe surroundings and consistent daily routines.
-            </p>
-            <p class="note">
-              Bird needs differ substantially between species and individuals.
-            </p>
-          </article>
+                <article class="care-card">
+                    <div class="care-icon">🐰</div>
+                    <h3>Rabbits</h3>
+                    <p>
+                        Provide appropriate food, clean living areas,
+                        movement, enrichment and safe opportunities to explore.
+                    </p>
+                </article>
 
-          <article class="card">
-            <h3>Small Pets</h3>
-            <p>
-              Provide suitable habitats, appropriate bedding, balanced food,
-              careful handling and enrichment suited to the animal.
-            </p>
-            <p class="note">
-              Small pets can have very different housing and dietary requirements.
-            </p>
-          </article>
+                <article class="care-card">
+                    <div class="care-icon">🐦</div>
+                    <h3>Birds</h3>
+                    <p>
+                        Consider species-appropriate nutrition, clean housing,
+                        enrichment, safe exercise and social interaction.
+                    </p>
+                </article>
 
-          <article class="card">
-            <h3>Reptiles</h3>
-            <p>
-              Pay close attention to species-specific habitat requirements,
-              temperature, lighting, diet and safe handling.
-            </p>
-            <p class="note">
-              Reptile care is highly species-specific and should be researched carefully.
-            </p>
-          </article>
+                <article class="care-card">
+                    <div class="care-icon">🐹</div>
+                    <h3>Small Pets</h3>
+                    <p>
+                        Small companions still need thoughtful habitats,
+                        suitable food, enrichment, cleanliness and gentle handling.
+                    </p>
+                </article>
 
-          <article class="card">
-            <h3>Fish &amp; Aquatic Pets</h3>
-            <p>
-              Focus on water quality, suitable environments, compatible
-              inhabitants, feeding routines and gradual environmental changes.
-            </p>
-            <p class="note">
-              Aquarium requirements vary considerably by species and setup.
-            </p>
-          </article>
+                <article class="care-card">
+                    <div class="care-icon">🦎</div>
+                    <h3>Reptiles & Aquatic Pets</h3>
+                    <p>
+                        Their environments can be highly specialized, so focus
+                        on species-specific habitat, temperature, water quality
+                        and feeding requirements.
+                    </p>
+                </article>
+
+            </div>
 
         </div>
-
-      </div>
     </section>
 
-    <section class="section section-soft">
-      <div class="container">
 
-        <div class="section-heading">
-          <p class="eyebrow">Everyday routines</p>
-          <h2>Small habits can support a comfortable routine.</h2>
-          <p>
-            Explore a few practical areas that can become part of your
-            everyday pet-care routine.
-          </p>
-        </div>
+    <section class="section routine-section">
+        <div class="container">
 
-        <div class="card-grid">
+            <p class="eyebrow">Everyday routines</p>
 
-          <article class="card image-card">
-            <img src="images/care/feeding.svg" alt="Pet feeding illustration">
-            <div>
-              <h3>Feeding</h3>
-              <p>
-                Keep meals consistent and choose food appropriate for the
-                animal's species, life stage and individual needs.
-              </p>
+            <h2>Small routines can make a big difference</h2>
+
+            <div class="routine-grid">
+
+                <article class="routine-card">
+                    <h3>🥣 Feeding</h3>
+                    <p>
+                        Choose food appropriate for the species and follow
+                        suitable feeding routines.
+                    </p>
+                </article>
+
+                <article class="routine-card">
+                    <h3>🧼 Grooming</h3>
+                    <p>
+                        Keep grooming needs in mind, including coat, nails,
+                        feathers or other species-specific care.
+                    </p>
+                </article>
+
+                <article class="routine-card">
+                    <h3>🏃 Exercise</h3>
+                    <p>
+                        Provide safe movement and activity that suits the
+                        animal's species, age and individual needs.
+                    </p>
+                </article>
+
+                <article class="routine-card">
+                    <h3>🧸 Enrichment</h3>
+                    <p>
+                        Offer safe opportunities for exploration, play,
+                        natural behaviors and mental engagement.
+                    </p>
+                </article>
+
             </div>
-          </article>
 
-          <article class="card image-card">
-            <img src="images/care/grooming.svg" alt="Pet grooming illustration">
-            <div>
-              <h3>Grooming</h3>
-              <p>
-                Regular grooming can help maintain comfort and cleanliness
-                while giving you opportunities to notice changes.
-              </p>
+            <div class="care-note">
+                <p>
+                    <strong>A helpful reminder:</strong>
+                    Pet-care information is general education. Animals can have
+                    very different needs depending on species, age, environment
+                    and individual circumstances. For health concerns or
+                    unusual changes in behavior, consult an appropriately
+                    qualified veterinary professional.
+                </p>
             </div>
-          </article>
-
-          <article class="card image-card">
-            <img src="images/care/exercise.svg" alt="Pet exercise illustration">
-            <div>
-              <h3>Exercise</h3>
-              <p>
-                Choose movement and activity that are suitable for the
-                species, age, ability and environment of your pet.
-              </p>
-            </div>
-          </article>
-
-          <article class="card image-card">
-            <img src="images/care/enrichment.svg" alt="Pet enrichment illustration">
-            <div>
-              <h3>Toys &amp; Enrichment</h3>
-              <p>
-                Enrichment can encourage natural behaviors and add variety
-                to everyday life when it is safe and appropriate.
-              </p>
-            </div>
-          </article>
 
         </div>
-
-      </div>
     </section>
+
 
     <section class="section">
-      <div class="container two-column">
+        <div class="container">
 
-        <div class="info-section">
-          <p class="eyebrow">A useful starting point</p>
-          <h2>Pay attention to the individual animal.</h2>
-          <p>
-            General pet-care information can be helpful, but no two animals
-            are exactly alike. Age, species, breed, environment, behavior and
-            existing needs can all affect an appropriate routine.
-          </p>
-          <p>
-            When something seems unusual or you have concerns about your
-            pet's health or wellbeing, seek advice from a qualified
-            veterinarian or appropriate animal-care professional.
-          </p>
+            <div class="about-card">
+
+                <p class="eyebrow">Keep learning</p>
+
+                <h2>Want a simple care checklist?</h2>
+
+                <p>
+                    Visit our free guide page for a handy starting point you
+                    can use when organizing everyday pet-care routines.
+                </p>
+
+                <a class="button button-primary" href="free-guide.html">
+                    Explore the Free Guide
+                </a>
+
+            </div>
+
         </div>
-
-        <div class="callout">
-          <h3>Keep learning</h3>
-          <p>
-            Good pet care is an ongoing process. Learn about your companion's
-            normal routines, provide a suitable environment and make changes
-            thoughtfully rather than all at once.
-          </p>
-          <a class="button" href="free-guide.html">Get the Free Guide</a>
-        </div>
-
-      </div>
     </section>
 
-  </main>
+</main>
 
-  <footer class="site-footer">
+
+<footer class="site-footer">
+
     <div class="container footer-grid">
 
-      <div>
-        <a class="brand footer-brand" href="index.html">
-          <img src="images/branding/logo-mark.svg" alt="" class="brand-mark">
-          <span>Paws &amp; Cuddles</span>
-        </a>
-        <p>
-          Warm, practical pet-care education for everyday life with animals.
-        </p>
-      </div>
+        <div>
+            <a class="brand footer-brand" href="index.html">
+                <span class="brand-mark">🐾</span>
+                <span>Paws & Cuddles</span>
+            </a>
 
-      <div>
-        <h3>Explore</h3>
-        <a href="pet-care.html">Pet Care</a>
-        <a href="free-guide.html">Free Guide</a>
-        <a href="products.html">Products</a>
-      </div>
+            <p>
+                Warm, practical pet-care education for everyday life with animals.
+            </p>
+        </div>
 
-      <div>
-        <h3>Info</h3>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-        <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Terms</a>
-        <a href="disclosure.html">Disclosure</a>
-      </div>
+        <div>
+            <h3>Explore</h3>
+            <a href="pet-care.html">Pet Care</a>
+            <a href="free-guide.html">Free Guide</a>
+            <a href="products.html">Products</a>
+        </div>
+
+        <div>
+            <h3>Information</h3>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="privacy.html">Privacy</a>
+            <a href="terms.html">Terms</a>
+            <a href="disclosure.html">Disclosure</a>
+        </div>
 
     </div>
 
     <div class="container footer-bottom">
-      <span>&copy; <span data-year></span> Paws &amp; Cuddles</span>
-      <span>Made with care for pet families.</span>
+        <span>
+            &copy; <span data-year></span> Paws & Cuddles
+        </span>
+
+        <span>Made with care for pet families.</span>
     </div>
-  </footer>
+
+</footer>
+
+
+<script src="js/main.js"></script>
 
 </body>
-  </html>
+          </html>
