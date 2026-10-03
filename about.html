@@ -1,269 +1,687 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Learn about Paws & Cuddles and its approach to practical, responsible pet-care education.">
-  <meta name="theme-color" content="#65765f">
-  <title>About | Paws &amp; Cuddles</title>
-  <link rel="stylesheet" href="CSS/styles.css">
-  <script src="js/main.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Learn about Paws & Cuddles and its approach to practical, responsible pet-care education."
+    >
+
+    <meta name="theme-color" content="#65765f">
+
+    <title>About | Paws & Cuddles</title>
+
+    <link rel="stylesheet" href="CSS/styles.css">
+
+    <style>
+
+        .page-hero {
+            padding: 80px 20px 60px;
+            background:
+                linear-gradient(
+                    rgba(247, 240, 228, 0.82),
+                    rgba(231, 239, 229, 0.82)
+                ),
+                url("images/hero/179104249002.jpg") center/cover no-repeat;
+            text-align: center;
+        }
+
+        .page-hero h1 {
+            max-width: 850px;
+            margin: 0 auto 18px;
+            font-size: clamp(2.2rem, 5vw, 4rem);
+            line-height: 1.1;
+        }
+
+        .page-hero p {
+            max-width: 720px;
+            margin: auto;
+            color: #5f655f;
+            font-size: 1.08rem;
+            line-height: 1.7;
+        }
+
+        .about-intro {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 45px;
+            align-items: center;
+        }
+
+        .about-image {
+            width: 100%;
+            height: 420px;
+            object-fit: cover;
+            border-radius: 24px;
+            display: block;
+            box-shadow: 0 12px 35px rgba(63, 68, 60, 0.10);
+        }
+
+        .info-section p,
+        .about-copy p {
+            color: #666b65;
+            line-height: 1.8;
+        }
+
+        .callout {
+            background: #e8efe8;
+            border: 1px solid #d5e1d5;
+            border-radius: 22px;
+            padding: 30px;
+        }
+
+        .callout p {
+            color: #465047;
+            line-height: 1.7;
+        }
+
+        .callout h3 {
+            margin-bottom: 12px;
+        }
+
+        .section-soft {
+            background: #f7f5ef;
+        }
+
+        .section-heading {
+            max-width: 760px;
+            margin-bottom: 35px;
+        }
+
+        .section-heading p:not(.eyebrow) {
+            color: #666b65;
+            line-height: 1.7;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
+        }
+
+        .card {
+            background: #fff;
+            border: 1px solid #e2e3dc;
+            border-radius: 22px;
+            padding: 28px;
+            box-shadow: 0 10px 30px rgba(63, 68, 60, 0.07);
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            color: #666b65;
+            line-height: 1.7;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
+            margin-top: 30px;
+        }
+
+        .final-callout {
+            background: #fff;
+            border: 1px solid #e2e3dc;
+            border-radius: 24px;
+            padding: 35px;
+            box-shadow: 0 10px 30px rgba(63, 68, 60, 0.07);
+        }
+
+        .final-callout p {
+            color: #666b65;
+            line-height: 1.8;
+        }
+
+        @media (max-width: 850px) {
+
+            .about-intro {
+                grid-template-columns: 1fr;
+            }
+
+            .about-image {
+                height: 350px;
+            }
+
+            .card-grid,
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+        @media (max-width: 600px) {
+
+            .page-hero {
+                padding: 60px 20px 45px;
+            }
+
+            .about-image {
+                height: 280px;
+            }
+
+            .card,
+            .callout,
+            .final-callout {
+                padding: 23px;
+            }
+
+        }
+
+    </style>
+
 </head>
+
 
 <body>
 
-  <header class="site-header">
+
+<header class="site-header">
+
     <div class="container nav-wrap">
-      <a class="brand" href="index.html" aria-label="Paws & Cuddles home">
-        <img src="images/branding/logo-mark.svg" alt="" class="brand-mark">
-        <span>Paws &amp; Cuddles</span>
-      </a>
 
-      <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">
-        Menu
-      </button>
+        <a
+            class="brand"
+            href="index.html"
+            aria-label="Paws & Cuddles home"
+        >
+            <span class="brand-mark">🐾</span>
+            <span>Paws & Cuddles</span>
+        </a>
 
-      <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
-        <a href="index.html">Home</a>
-        <a href="pet-care.html">Pet Care</a>
-        <a href="free-guide.html">Free Guide</a>
-        <a href="products.html">Products</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-      </nav>
+
+        <nav
+            class="site-nav"
+            aria-label="Primary navigation"
+        >
+            <a href="index.html">Home</a>
+            <a href="pet-care.html">Pet Care</a>
+            <a href="free-guide.html">Free Guide</a>
+            <a href="products.html">Products</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
     </div>
-  </header>
 
-  <main>
+</header>
+
+
+<main>
+
+
+    <!-- HERO -->
 
     <section class="page-hero">
-      <div class="container narrow">
-        <p class="eyebrow">About Paws &amp; Cuddles</p>
-        <h1>A calmer corner of the internet for pet families.</h1>
-        <p class="lead">
-          Paws &amp; Cuddles is built around practical pet-care education,
-          thoughtful routines and the everyday moments that make life with
-          animals special.
-        </p>
-      </div>
+
+        <div class="container">
+
+            <p class="eyebrow">
+                About Paws & Cuddles
+            </p>
+
+            <h1>
+                A calmer corner of the internet for pet families.
+            </h1>
+
+            <p>
+                Paws & Cuddles is built around practical pet-care education,
+                thoughtful routines and the everyday moments that make life
+                with animals special.
+            </p>
+
+        </div>
+
     </section>
+
+
+    <!-- INTRO -->
 
     <section class="section">
-      <div class="container two-column">
 
-        <div class="info-section">
-          <p class="eyebrow">Our focus</p>
-          <h2>Useful information without unnecessary complexity.</h2>
+        <div class="container about-intro">
 
-          <p>
-            Pet care can sometimes feel overwhelming. There are products to
-            compare, routines to establish, behaviors to understand and
-            countless opinions to sort through.
-          </p>
 
-          <p>
-            Paws &amp; Cuddles aims to make everyday pet-care topics easier to
-            explore by presenting information in a clear, friendly and
-            approachable way.
-          </p>
+            <div class="about-copy">
 
-          <p>
-            The site covers a broad range of companion animals, from dogs and
-            cats to rabbits, birds, small pets, reptiles and aquatic pets.
-          </p>
+                <p class="eyebrow">
+                    Our focus
+                </p>
+
+                <h2>
+                    Useful information without unnecessary complexity.
+                </h2>
+
+                <p>
+                    Pet care can sometimes feel overwhelming. There are
+                    products to compare, routines to establish, behaviors
+                    to understand and countless opinions to sort through.
+                </p>
+
+                <p>
+                    Paws & Cuddles aims to make everyday pet-care topics
+                    easier to explore by presenting information in a clear,
+                    friendly and approachable way.
+                </p>
+
+                <p>
+                    The site covers a broad range of companion animals,
+                    from dogs and cats to rabbits, birds, small pets,
+                    reptiles and aquatic pets.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <img
+                    class="about-image"
+                    src="images/lifestyle/1791047413816.jpg"
+                    alt="Bird and owner enjoying time together"
+                >
+
+            </div>
+
         </div>
 
-        <div class="callout">
-          <p class="eyebrow">The goal</p>
-          <h3>Make everyday care feel more manageable.</h3>
-
-          <p>
-            Good pet care is built through small, consistent choices:
-            appropriate food, suitable environments, enrichment, grooming,
-            activity, observation and plenty of care and attention.
-          </p>
-
-          <a class="button" href="pet-care.html">
-            Explore Pet Care
-          </a>
-        </div>
-
-      </div>
     </section>
+
+
+    <!-- GOAL -->
 
     <section class="section section-soft">
-      <div class="container">
 
-        <div class="section-heading">
-          <p class="eyebrow">What you'll find here</p>
-          <h2>A broad approach to life with pets.</h2>
-          <p>
-            Paws &amp; Cuddles brings several everyday pet topics together in
-            one welcoming place.
-          </p>
+        <div class="container two-column">
+
+
+            <div>
+
+                <p class="eyebrow">
+                    The goal
+                </p>
+
+                <h2>
+                    Make everyday care feel more manageable.
+                </h2>
+
+                <p>
+                    Good pet care is built through small, consistent
+                    choices: appropriate food, suitable environments,
+                    enrichment, grooming, activity, observation and
+                    plenty of care and attention.
+                </p>
+
+            </div>
+
+
+            <div class="callout">
+
+                <h3>
+                    Thoughtful care starts with understanding.
+                </h3>
+
+                <p>
+                    Every animal is different. Species, age, environment,
+                    behavior and individual circumstances can all affect
+                    what is appropriate.
+                </p>
+
+                <a
+                    class="button button-primary"
+                    href="pet-care.html"
+                >
+                    Explore Pet Care
+                </a>
+
+            </div>
+
         </div>
 
-        <div class="card-grid">
-
-          <article class="card">
-            <h3>Pet Care</h3>
-            <p>
-              Practical starting points for feeding, grooming, exercise,
-              enrichment and species-specific routines.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>Pet Products</h3>
-            <p>
-              Helpful considerations for choosing grooming tools, feeding
-              supplies, toys, enrichment items and everyday essentials.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>Free Resources</h3>
-            <p>
-              Simple guides and resources designed to help pet families
-              organize useful information in one place.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>Pet Lifestyle</h3>
-            <p>
-              Ideas and inspiration around creating comfortable, enriching
-              and enjoyable everyday environments for companion animals.
-            </p>
-          </article>
-
-        </div>
-
-      </div>
     </section>
+
+
+    <!-- WHAT YOU WILL FIND -->
 
     <section class="section">
-      <div class="container">
 
-        <div class="section-heading">
-          <p class="eyebrow">Our approach</p>
-          <h2>Clear, responsible and pet-focused.</h2>
+        <div class="container">
+
+            <div class="section-heading">
+
+                <p class="eyebrow">
+                    What you'll find here
+                </p>
+
+                <h2>
+                    A broad approach to life with pets.
+                </h2>
+
+                <p>
+                    Paws & Cuddles brings several everyday pet topics
+                    together in one welcoming place.
+                </p>
+
+            </div>
+
+
+            <div class="card-grid">
+
+
+                <article class="card">
+
+                    <h3>
+                        🐾 Pet Care
+                    </h3>
+
+                    <p>
+                        Practical starting points for feeding, grooming,
+                        exercise, enrichment and species-specific routines.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>
+                        🛍️ Pet Products
+                    </h3>
+
+                    <p>
+                        Helpful considerations for choosing grooming tools,
+                        feeding supplies, toys, enrichment items and
+                        everyday essentials.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>
+                        📖 Free Resources
+                    </h3>
+
+                    <p>
+                        Simple guides and resources designed to help
+                        pet families organize useful information in
+                        one place.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>
+                        🏡 Pet Lifestyle
+                    </h3>
+
+                    <p>
+                        Ideas and inspiration around creating comfortable,
+                        enriching and enjoyable everyday environments
+                        for companion animals.
+                    </p>
+
+                </article>
+
+
+            </div>
+
         </div>
 
-        <div class="card-grid">
-
-          <article class="card">
-            <h3>Clear language</h3>
-            <p>
-              We aim to explain everyday pet-care topics in straightforward
-              language that is easy to understand and use.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>Responsible ownership</h3>
-            <p>
-              Pet care includes understanding an animal's needs, providing
-              suitable environments and paying attention to changes over time.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>Individual needs matter</h3>
-            <p>
-              General information is a starting point. Species, age, health,
-              behavior and environment can all affect what is appropriate.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>Professional guidance</h3>
-            <p>
-              General educational content does not replace individualized
-              advice from a qualified veterinarian or other appropriate
-              animal-care professional.
-            </p>
-          </article>
-
-        </div>
-
-      </div>
     </section>
+
+
+    <!-- APPROACH -->
 
     <section class="section section-soft">
-      <div class="container two-column">
 
-        <div>
-          <p class="eyebrow">Keep it useful</p>
-          <h2>Small, practical steps can add up.</h2>
+        <div class="container">
 
-          <p>
-            Whether you're preparing for a new pet, improving an existing
-            routine or simply learning more about animals, the aim is to
-            focus on information that can be understood and applied
-            thoughtfully.
-          </p>
+            <div class="section-heading">
 
-          <p>
-            Take what is relevant to your situation, check species-specific
-            guidance and make choices that keep your companion's wellbeing
-            at the center.
-          </p>
+                <p class="eyebrow">
+                    Our approach
+                </p>
+
+                <h2>
+                    Clear, responsible and pet-focused.
+                </h2>
+
+            </div>
+
+
+            <div class="values-grid">
+
+
+                <article class="card">
+
+                    <h3>
+                        Clear language
+                    </h3>
+
+                    <p>
+                        We aim to explain everyday pet-care topics in
+                        straightforward language that is easy to understand
+                        and use.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>
+                        Responsible ownership
+                    </h3>
+
+                    <p>
+                        Pet care includes understanding an animal's needs,
+                        providing suitable environments and paying attention
+                        to changes over time.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>
+                        Individual needs matter
+                    </h3>
+
+                    <p>
+                        General information is a starting point. Species,
+                        age, health, behavior and environment can all affect
+                        what is appropriate.
+                    </p>
+
+                </article>
+
+
+                <article class="card">
+
+                    <h3>
+                        Professional guidance
+                    </h3>
+
+                    <p>
+                        General educational content does not replace
+                        individualized advice from a qualified veterinarian
+                        or other appropriate animal-care professional.
+                    </p>
+
+                </article>
+
+
+            </div>
+
         </div>
 
-        <div class="callout">
-          <h3>Have a question?</h3>
-          <p>
-            If you have a question, suggestion or idea for a future resource,
-            we'd be happy to hear from you.
-          </p>
-
-          <a class="button button-secondary" href="contact.html">
-            Contact Us
-          </a>
-        </div>
-
-      </div>
     </section>
 
-  </main>
 
-  <footer class="site-footer">
+    <!-- KEEP IT USEFUL -->
+
+    <section class="section">
+
+        <div class="container">
+
+
+            <div class="final-callout">
+
+                <p class="eyebrow">
+                    Keep it useful
+                </p>
+
+                <h2>
+                    Small, practical steps can add up.
+                </h2>
+
+                <p>
+                    Whether you're preparing for a new pet, improving an
+                    existing routine or simply learning more about animals,
+                    the aim is to focus on information that can be understood
+                    and applied thoughtfully.
+                </p>
+
+                <p>
+                    Take what is relevant to your situation, check
+                    species-specific guidance and make choices that keep
+                    your companion's wellbeing at the center.
+                </p>
+
+
+                <h3>
+                    Have a question?
+                </h3>
+
+                <p>
+                    If you have a question, suggestion or idea for a future
+                    resource, we'd be happy to hear from you.
+                </p>
+
+                <a
+                    class="button button-secondary"
+                    href="contact.html"
+                >
+                    Contact Us
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer class="site-footer">
+
     <div class="container footer-grid">
 
-      <div>
-        <a class="brand footer-brand" href="index.html">
-          <img src="images/branding/logo-mark.svg" alt="" class="brand-mark">
-          <span>Paws &amp; Cuddles</span>
-        </a>
-        <p>
-          Warm, practical pet-care education for everyday life with animals.
-        </p>
-      </div>
 
-      <div>
-        <h3>Explore</h3>
-        <a href="pet-care.html">Pet Care</a>
-        <a href="free-guide.html">Free Guide</a>
-        <a href="products.html">Products</a>
-      </div>
+        <div>
 
-      <div>
-        <h3>Info</h3>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
-        <a href="privacy.html">Privacy</a>
-        <a href="terms.html">Terms</a>
-        <a href="disclosure.html">Disclosure</a>
-      </div>
+            <a
+                class="brand footer-brand"
+                href="index.html"
+            >
+                <span class="brand-mark">🐾</span>
+                <span>Paws & Cuddles</span>
+            </a>
+
+            <p>
+                Warm, practical pet-care education for everyday life
+                with animals.
+            </p>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Explore
+            </h3>
+
+            <a href="pet-care.html">
+                Pet Care
+            </a>
+
+            <a href="free-guide.html">
+                Free Guide
+            </a>
+
+            <a href="products.html">
+                Products
+            </a>
+
+        </div>
+
+
+        <div>
+
+            <h3>
+                Information
+            </h3>
+
+            <a href="about.html">
+                About
+            </a>
+
+            <a href="contact.html">
+                Contact
+            </a>
+
+            <a href="privacy.html">
+                Privacy
+            </a>
+
+            <a href="terms.html">
+                Terms
+            </a>
+
+            <a href="disclosure.html">
+                Disclosure
+            </a>
+
+        </div>
+
 
     </div>
+
 
     <div class="container footer-bottom">
-      <span>&copy; <span data-year></span> Paws &amp; Cuddles</span>
-      <span>Made with care for pet families.</span>
+
+        <span>
+            &copy; <span data-year></span> Paws & Cuddles
+        </span>
+
+        <span>
+            Made with care for pet families.
+        </span>
+
     </div>
-  </footer>
+
+</footer>
+
+
+<script src="js/main.js"></script>
 
 </body>
-  </html>
+
+</html>
