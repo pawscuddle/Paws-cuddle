@@ -1,471 +1,451 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Products | Paws & Cuddles</title>
 
-    <title>Products | Paws & Cuddles</title>
+<meta name="description" content="Explore practical pet products and learn what to consider when choosing everyday pet-care items.">
 
-    <meta name="description" content="Explore practical pet products and learn what to consider when choosing everyday pet-care items.">
+<link rel="stylesheet" href="CSS/styles.css">
 
-    <link rel="stylesheet" href="CSS/styles.css">
+<style>
+    .page-hero {
+        padding: 80px 20px 60px;
+        background:
+            linear-gradient(rgba(247, 240, 228, 0.82), rgba(231, 239, 229, 0.82)),
+            url("images/hero/179104249002.jpg") center/cover no-repeat;
+        text-align: center;
+    }
 
-    <style>
-        .page-hero {
-            padding: 80px 20px 60px;
-            background: linear-gradient(135deg, #f7f0e4, #e7efe5);
-            text-align: center;
-        }
+    .page-hero h1 {
+        max-width: 800px;
+        margin: 0 auto 18px;
+        font-size: clamp(2.2rem, 5vw, 4rem);
+        line-height: 1.1;
+    }
 
-        .page-hero h1 {
-            max-width: 800px;
-            margin: 0 auto 18px;
-            font-size: clamp(2.2rem, 5vw, 4rem);
-            line-height: 1.1;
-        }
+    .page-hero p {
+        max-width: 720px;
+        margin: auto;
+        color: #5f655f;
+        font-size: 1.08rem;
+    }
 
-        .page-hero p {
-            max-width: 720px;
-            margin: auto;
-            color: #5f655f;
-            font-size: 1.08rem;
-        }
+    .product-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+        margin-top: 35px;
+    }
 
+    .product-card {
+        background: #fff;
+        border: 1px solid #e2e3dc;
+        border-radius: 24px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(63, 68, 60, 0.07);
+    }
+
+    .product-image {
+        width: 100%;
+        height: 230px;
+        display: block;
+        object-fit: cover;
+        background: #f5f1e8;
+    }
+
+    .product-content {
+        padding: 25px;
+    }
+
+    .product-content h3 {
+        margin-bottom: 10px;
+    }
+
+    .product-content p {
+        color: #666b65;
+        line-height: 1.7;
+    }
+
+    .consider-section {
+        background: #f7f5ef;
+    }
+
+    .consider-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+        margin-top: 30px;
+    }
+
+    .consider-card {
+        background: #fff;
+        padding: 23px;
+        border-radius: 18px;
+        border: 1px solid #e2e3dc;
+    }
+
+    .consider-card h3 {
+        margin-bottom: 8px;
+    }
+
+    .consider-card p {
+        color: #666b65;
+        line-height: 1.6;
+        font-size: 0.95rem;
+    }
+
+    .safety-note {
+        margin-top: 35px;
+        padding: 25px;
+        border-radius: 18px;
+        background: #e8efe8;
+        border: 1px solid #d5e1d5;
+    }
+
+    .safety-note p {
+        margin: 0;
+        color: #465047;
+        line-height: 1.7;
+    }
+
+    .disclosure-box {
+        margin-top: 35px;
+        padding: 28px;
+        border: 1px solid #e2e3dc;
+        border-radius: 20px;
+        background: #fff;
+    }
+
+    .disclosure-box p {
+        color: #666b65;
+        line-height: 1.7;
+    }
+
+    @media (max-width: 800px) {
         .product-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 25px;
-            margin-top: 35px;
-        }
-
-        .product-card {
-            background: #fff;
-            border: 1px solid #e2e3dc;
-            border-radius: 24px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(63, 68, 60, 0.07);
-        }
-
-        .product-image {
-            width: 100%;
-            height: 230px;
-            display: block;
-            object-fit: cover;
-            background: #f5f1e8;
-        }
-
-        .product-content {
-            padding: 25px;
-        }
-
-        .product-content h3 {
-            margin-bottom: 10px;
-        }
-
-        .product-content p {
-            color: #666b65;
-            line-height: 1.7;
-        }
-
-        .consider-section {
-            background: #f7f5ef;
+            grid-template-columns: 1fr;
         }
 
         .consider-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 18px;
-            margin-top: 30px;
+            grid-template-columns: 1fr;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .page-hero {
+            padding: 60px 20px 45px;
         }
 
-        .consider-card {
-            background: #fff;
-            padding: 23px;
-            border-radius: 18px;
-            border: 1px solid #e2e3dc;
+        .product-image {
+            height: 210px;
         }
+    }
+</style>
 
-        .consider-card h3 {
-            margin-bottom: 8px;
-        }
+</head><body><header class="site-header">
+    <div class="container nav-wrap">    <a class="brand" href="index.html" aria-label="Paws & Cuddles home">
+        <span class="brand-mark">🐾</span>
+        <span>Paws & Cuddles</span>
+    </a>
 
-        .consider-card p {
-            color: #666b65;
-            line-height: 1.6;
-            font-size: 0.95rem;
-        }
+    <nav class="site-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="pet-care.html">Pet Care</a>
+        <a href="free-guide.html">Free Guide</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
 
-        .safety-note {
-            margin-top: 35px;
-            padding: 25px;
-            border-radius: 18px;
-            background: #e8efe8;
-            border: 1px solid #d5e1d5;
-        }
+</div>
 
-        .safety-note p {
-            margin: 0;
-            color: #465047;
-            line-height: 1.7;
-        }
+</header><main><section class="page-hero">
+    <div class="container">
 
-        .disclosure-box {
-            margin-top: 35px;
-            padding: 28px;
-            border: 1px solid #e2e3dc;
-            border-radius: 20px;
-            background: #fff;
-        }
+        <p class="eyebrow">Pet products</p>
 
-        .disclosure-box p {
-            color: #666b65;
-            line-height: 1.7;
-        }
+        <h1>
+            Useful things for everyday pet life.
+        </h1>
 
-        @media (max-width: 800px) {
-            .product-grid {
-                grid-template-columns: 1fr;
-            }
+        <p>
+            Explore everyday product categories and learn what to consider
+            when choosing items for the animals in your care.
+        </p>
 
-            .consider-grid {
-                grid-template-columns: 1fr;
-            }
-        }
+    </div>
+</section>
 
-        @media (max-width: 600px) {
-            .page-hero {
-                padding: 60px 20px 45px;
-            }
 
-            .product-image {
-                height: 210px;
-            }
-        }
-    </style>
-</head>
+<section class="section">
+    <div class="container">
 
-<body>
+        <p class="eyebrow">Explore products</p>
 
-<header class="site-header">
-    <div class="container nav-wrap">
+        <h2>Helpful categories for pet families</h2>
 
-        <a class="brand" href="index.html" aria-label="Paws & Cuddles home">
+        <div class="product-grid">
+
+            <article class="product-card">
+
+                <img
+                    src="images/products/1791046133667.jpg"
+                    alt="Pet grooming products"
+                    class="product-image"
+                >
+
+                <div class="product-content">
+                    <h3>🧼 Grooming</h3>
+
+                    <p>
+                        Consider brushes, grooming tools and cleaning
+                        products based on the animal's coat, skin,
+                        size and individual needs.
+                    </p>
+                </div>
+
+            </article>
+
+
+            <article class="product-card">
+
+                <img
+                    src="images/products/1791045995545.jpg"
+                    alt="Pet feeding products"
+                    class="product-image"
+                >
+
+                <div class="product-content">
+                    <h3>🥣 Feeding</h3>
+
+                    <p>
+                        Feeding bowls, storage containers and related
+                        accessories should be practical, suitable and
+                        easy to keep clean.
+                    </p>
+                </div>
+
+            </article>
+
+
+            <article class="product-card">
+
+                <img
+                    src="images/products/1791046001432.jpg"
+                    alt="Pet toys and enrichment products"
+                    class="product-image"
+                >
+
+                <div class="product-content">
+                    <h3>🧸 Toys & Enrichment</h3>
+
+                    <p>
+                        Choose enrichment items that are appropriate for
+                        the species, size and abilities of the animal
+                        using them.
+                    </p>
+                </div>
+
+            </article>
+
+
+            <article class="product-card">
+
+                <img
+                    src="images/products/1791046004507.jpg"
+                    alt="Everyday pet essentials"
+                    class="product-image"
+                >
+
+                <div class="product-content">
+                    <h3>🏠 Everyday Essentials</h3>
+
+                    <p>
+                        Everyday accessories can help create comfortable,
+                        practical spaces for pets while supporting their
+                        normal routines.
+                    </p>
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+</section>
+
+
+<section class="section consider-section">
+
+    <div class="container">
+
+        <p class="eyebrow">Before you buy</p>
+
+        <h2>Things worth considering</h2>
+
+        <div class="consider-grid">
+
+            <article class="consider-card">
+                <h3>🐾 Suitability</h3>
+
+                <p>
+                    Check whether the item is appropriate for your
+                    pet's species, size, age and individual needs.
+                </p>
+            </article>
+
+
+            <article class="consider-card">
+                <h3>📏 Size & Fit</h3>
+
+                <p>
+                    Make sure products such as beds, carriers, collars,
+                    harnesses and habitats are appropriately sized.
+                </p>
+            </article>
+
+
+            <article class="consider-card">
+                <h3>🧽 Cleaning</h3>
+
+                <p>
+                    Consider how easily an item can be cleaned and
+                    maintained as part of your regular routine.
+                </p>
+            </article>
+
+
+            <article class="consider-card">
+                <h3>🛡️ Safe Use</h3>
+
+                <p>
+                    Follow the manufacturer's instructions and inspect
+                    products regularly for damage or wear.
+                </p>
+            </article>
+
+
+            <article class="consider-card">
+                <h3>🌿 Materials</h3>
+
+                <p>
+                    Consider the materials used and whether they are
+                    suitable for the intended animal and environment.
+                </p>
+            </article>
+
+
+            <article class="consider-card">
+                <h3>📋 Instructions</h3>
+
+                <p>
+                    Read product instructions carefully before using
+                    equipment, accessories or specialized items.
+                </p>
+            </article>
+
+        </div>
+
+
+        <div class="safety-note">
+
+            <p>
+                <strong>Safety reminder:</strong>
+                Products should be used according to their instructions
+                and supervised when appropriate. If an item becomes
+                damaged or unsafe, stop using it and replace it as needed.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="section">
+
+    <div class="container">
+
+        <div class="disclosure-box">
+
+            <p class="eyebrow">Transparency</p>
+
+            <h2>About product information</h2>
+
+            <p>
+                Product information on Paws & Cuddles is intended to help
+                readers think through everyday purchasing decisions.
+                Always check current product details, suitability, pricing
+                and availability with the relevant seller or manufacturer.
+            </p>
+
+            <a
+                href="disclosure.html"
+                class="button button-primary"
+            >
+                Read Product Disclosure
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main><footer class="site-footer"><div class="container footer-grid">
+
+    <div>
+
+        <a class="brand footer-brand" href="index.html">
             <span class="brand-mark">🐾</span>
             <span>Paws & Cuddles</span>
         </a>
 
-        <nav class="site-nav" aria-label="Primary navigation">
-            <a href="index.html">Home</a>
-            <a href="pet-care.html">Pet Care</a>
-            <a href="free-guide.html">Free Guide</a>
-            <a href="products.html">Products</a>
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+        <p>
+            Warm, practical pet-care education for everyday life with animals.
+        </p>
 
     </div>
-</header>
 
 
-<main>
+    <div>
 
-    <section class="page-hero">
-        <div class="container">
+        <h3>Explore</h3>
 
-            <p class="eyebrow">Pet products</p>
-
-            <h1>
-                Useful things for everyday pet life.
-            </h1>
-
-            <p>
-                Explore everyday product categories and learn what to consider
-                when choosing items for the animals in your care.
-            </p>
-
-        </div>
-    </section>
-
-
-    <section class="section">
-        <div class="container">
-
-            <p class="eyebrow">Explore products</p>
-
-            <h2>Helpful categories for pet families</h2>
-
-            <div class="product-grid">
-
-                <article class="product-card">
-
-                    <img
-                        src="images/products/grooming.svg"
-                        alt="Pet grooming products"
-                        class="product-image"
-                    >
-
-                    <div class="product-content">
-                        <h3>🧼 Grooming</h3>
-
-                        <p>
-                            Consider brushes, grooming tools and cleaning
-                            products based on the animal's coat, skin,
-                            size and individual needs.
-                        </p>
-                    </div>
-
-                </article>
-
-
-                <article class="product-card">
-
-                    <img
-                        src="images/products/feeding.svg"
-                        alt="Pet feeding products"
-                        class="product-image"
-                    >
-
-                    <div class="product-content">
-                        <h3>🥣 Feeding</h3>
-
-                        <p>
-                            Feeding bowls, storage containers and related
-                            accessories should be practical, suitable and
-                            easy to keep clean.
-                        </p>
-                    </div>
-
-                </article>
-
-
-                <article class="product-card">
-
-                    <img
-                        src="images/products/toys.svg"
-                        alt="Pet toys and enrichment products"
-                        class="product-image"
-                    >
-
-                    <div class="product-content">
-                        <h3>🧸 Toys & Enrichment</h3>
-
-                        <p>
-                            Choose enrichment items that are appropriate for
-                            the species, size and abilities of the animal
-                            using them.
-                        </p>
-                    </div>
-
-                </article>
-
-
-                <article class="product-card">
-
-                    <img
-                        src="images/products/essentials.svg"
-                        alt="Everyday pet essentials"
-                        class="product-image"
-                    >
-
-                    <div class="product-content">
-                        <h3>🏠 Everyday Essentials</h3>
-
-                        <p>
-                            Everyday accessories can help create comfortable,
-                            practical spaces for pets while supporting their
-                            normal routines.
-                        </p>
-                    </div>
-
-                </article>
-
-            </div>
-
-        </div>
-    </section>
-
-
-    <section class="section consider-section">
-
-        <div class="container">
-
-            <p class="eyebrow">Before you buy</p>
-
-            <h2>Things worth considering</h2>
-
-            <div class="consider-grid">
-
-                <article class="consider-card">
-                    <h3>🐾 Suitability</h3>
-
-                    <p>
-                        Check whether the item is appropriate for your
-                        pet's species, size, age and individual needs.
-                    </p>
-                </article>
-
-
-                <article class="consider-card">
-                    <h3>📏 Size & Fit</h3>
-
-                    <p>
-                        Make sure products such as beds, carriers, collars,
-                        harnesses and habitats are appropriately sized.
-                    </p>
-                </article>
-
-
-                <article class="consider-card">
-                    <h3>🧽 Cleaning</h3>
-
-                    <p>
-                        Consider how easily an item can be cleaned and
-                        maintained as part of your regular routine.
-                    </p>
-                </article>
-
-
-                <article class="consider-card">
-                    <h3>🛡️ Safe Use</h3>
-
-                    <p>
-                        Follow the manufacturer's instructions and inspect
-                        products regularly for damage or wear.
-                    </p>
-                </article>
-
-
-                <article class="consider-card">
-                    <h3>🌿 Materials</h3>
-
-                    <p>
-                        Consider the materials used and whether they are
-                        suitable for the intended animal and environment.
-                    </p>
-                </article>
-
-
-                <article class="consider-card">
-                    <h3>📋 Instructions</h3>
-
-                    <p>
-                        Read product instructions carefully before using
-                        equipment, accessories or specialized items.
-                    </p>
-                </article>
-
-            </div>
-
-
-            <div class="safety-note">
-
-                <p>
-                    <strong>Safety reminder:</strong>
-                    Products should be used according to their instructions
-                    and supervised when appropriate. If an item becomes
-                    damaged or unsafe, stop using it and replace it as needed.
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <section class="section">
-
-        <div class="container">
-
-            <div class="disclosure-box">
-
-                <p class="eyebrow">Transparency</p>
-
-                <h2>About product information</h2>
-
-                <p>
-                    Product information on Paws & Cuddles is intended to help
-                    readers think through everyday purchasing decisions.
-                    Always check current product details, suitability, pricing
-                    and availability with the relevant seller or manufacturer.
-                </p>
-
-                <a
-                    href="disclosure.html"
-                    class="button button-primary"
-                >
-                    Read Product Disclosure
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
-
-</main>
-
-
-<footer class="site-footer">
-
-    <div class="container footer-grid">
-
-        <div>
-
-            <a class="brand footer-brand" href="index.html">
-                <span class="brand-mark">🐾</span>
-                <span>Paws & Cuddles</span>
-            </a>
-
-            <p>
-                Warm, practical pet-care education for everyday life with animals.
-            </p>
-
-        </div>
-
-
-        <div>
-
-            <h3>Explore</h3>
-
-            <a href="pet-care.html">Pet Care</a>
-            <a href="free-guide.html">Free Guide</a>
-            <a href="products.html">Products</a>
-
-        </div>
-
-
-        <div>
-
-            <h3>Information</h3>
-
-            <a href="about.html">About</a>
-            <a href="contact.html">Contact</a>
-            <a href="privacy.html">Privacy</a>
-            <a href="terms.html">Terms</a>
-            <a href="disclosure.html">Disclosure</a>
-
-        </div>
+        <a href="pet-care.html">Pet Care</a>
+        <a href="free-guide.html">Free Guide</a>
+        <a href="products.html">Products</a>
 
     </div>
 
 
-    <div class="container footer-bottom">
+    <div>
 
-        <span>
-            &copy; <span data-year></span> Paws & Cuddles
-        </span>
+        <h3>Information</h3>
 
-        <span>
-            Made with care for pet families.
-        </span>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
+        <a href="disclosure.html">Disclosure</a>
 
     </div>
 
-</footer>
+</div>
 
 
-<script src="js/main.js"></script>
+<div class="container footer-bottom">
 
-</body>
+    <span>
+        &copy; <span data-year></span> Paws & Cuddles
+    </span>
+
+    <span>
+        Made with care for pet families.
+    </span>
+
+</div>
+
+</footer><script src="js/main.js"></script></body>
 </html>
